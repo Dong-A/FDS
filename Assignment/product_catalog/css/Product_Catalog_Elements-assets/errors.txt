@@ -1,0 +1,1 @@
+[Wed Sep 28 2016 17:53:11 GMT+0900 (KST)] layer "icon-Hit.svg, icon-Hit.png, 200% icon-Hit.png": Duplicate path: icon-Hit.png

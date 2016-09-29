@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* 리셋 */
+ul{
+  list-style-type: none;
+}
+/* 레이아웃 */
+.wrapper{
+  position: relative;
+  width: 960px;
+  margin: auto;
+}
+
+/*===== 헤더 =====*/
+.header{;
+  height: 10%;
+}
+.logo{
+  position: absolute;
+  left: 80px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+}
+.date{
+  position: absolute;
+  left: 170px;
+  font-family: 'PT', serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: silver;
+}
+.writter{
+  position: absolute;
+  left: 735px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  color: grey;
+  margin-top: 5px;
+}
+.writter span{
+  font-family: 'PT', serif;
+  font-style: italic;
+}
+
+/*===== 메인 =====*/
+.main{
+  position: relative;
+  top: 40px;
+}
+p {
+  line-height: 1.8rem;
+  color: grey;
+}
+.main h1{
+  width: 600px;
+  margin: 30px 80px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 3rem;
+}
+.main h2{
+  width: 600px;
+  margin: 30px 80px;
+  font-family: 'PT', serif;
+  font-style: italic;
+  font-weight: 100;
+  color: grey;
+}
+.p1{
+  margin: 30px 80px;
+  width: 650px;
+  font-family: 'Myriad Pro';
+}
+.photos{
+  overflow: hidden;
+}
+.photos figure{
+  margin: 0;
+  display: block;
+  float: left;
+}
+.photos figcaption{
+  text-align: center;
+  font-size: 0.7rem;
+  font-family: 'PT', serif;
+  font-style: italic;
+  color: silver;
+  padding-top: 10px;
+}
+.main h3{
+  margin: 40px 80px;
+}
+.p2{
+  width: 650px;
+  margin: 30px 80px;
+}
+.komol{
+  float: right;
+  margin:0 300px 0 0;
+}
+.komol figcaption{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 0.8rem;
+  width: 130px;
+}
+.komol figcaption span{
+  font-family: 'PT', serif;
+  font-style: italic;
+  font-size: 0.7rem;
+  color: silver;
+}
+blockquote{
+  font-family: 'PT', serif;
+  font-style: italic;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+  width: 400px;
+  margin: 30px 80px;
+}
+.p3{
+  width: 650px;
+  margin: 30px 80px;
+}
+.photo-wolf{
+  margin-left: 40px;
+}
+.wolf figcaption{
+  width: 600px;
+  margin-left: 40px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-family: 'PT', serif;
+  font-style: italic;
+  color: silver;
+  padding-top: 10px;
+}
+.article{
+  padding: 0 0 0 80px;
+}
+.article::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.article1{
+  float: left;
+  width: 240px;
+  left: 80px;
+  margin: 0 100px 0 0;
+}
+.article2{
+  float: left;
+  width: 240px;
+  right: 350px;
+}
+
+/*===== 푸터 =====*/
+.footer{
+  margin-top: 70px;
+}
+.wrap-sns{
+  margin-left: 30px;
+}
+.back{
+  font-family: 'Varela Round', sans-serif;
+}
+.sns li{
+  float: left;
+}
+.sns a{
+  margin: 5px;
+  padding-right: 70px;
+  padding-left: 15px;
+  padding-top: 10px;
+  position: relative;
+}
+.sns img{
+  position: absolute;
+  top: 7px;
+}
+.sns::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.area{
+  border-radius: 15px;
+  line-height: 2.2rem;
+}
+.facebook-area{
+  background-color: blue;
+}
+.twitter-area{
+  background-color: skyblue;
+}
+.google-area{
+  background-color: tomato;
+}
+.pinterest-area{
+  background-color: red;
+}
+.back{
+  margin-left: 80px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: blue;
+}

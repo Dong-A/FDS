@@ -1,0 +1,139 @@
+@charset "UTF-8";
+.login{
+  width: 360px;
+  margin: auto;
+  position: relative;
+}
+fieldset{
+  border: 0;
+}
+
+fieldset li{
+  list-style-type: none;
+}
+div ul{
+  margin: 0;
+}
+
+/* 숨김 콘텐츠 */
+.hidden{
+  display: none;
+}
+
+
+
+/*===== 메인 =====*/
+h1{
+  text-align: center;
+}
+.user-login{
+  text-align: center;
+}
+fieldset h1{
+  font-family: 'Varela Round';
+  font-size: 1.2rem;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+#user-login-input, #user-pwd-input{
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 15px;
+  width: 240px;
+  background-color: #f6f6f6;
+  padding: 10px 20px;
+  margin: 5px;
+  font-family: 'PT Serif';
+  font-style: italic;
+  color: #868686;
+}
+#user-pwd-input{
+  margin-bottom: 15px;
+}
+.user-pwd{
+  text-align: center;
+}
+.btn-login{
+  background-color: #1f4ba5;
+  padding: 7px 35px;
+  display: block;
+  text-align: center;
+  border: 0;
+  border-radius: 15px;
+  color: #fff;
+  margin: auto;
+  font-family: 'Varela Round';
+  font-size: 0.8rem;
+}
+.sns-login p{
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-family: 'PT Serif';
+  font-style: italic;
+  color: #ababab;
+}
+.sns-icon:after, .sns-icon::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.sns-icon{
+ margin-left: 5px;
+}
+.sns-icon li{
+  float: left;
+}
+.sns-icon a{
+  display: inline-block;
+  width: 110px;
+  height: 26px;
+  border-radius: 15px;
+  text-align: center;
+  text-indent: -9999em;
+  margin: 0 5px;
+}
+.facebook-login-icon{
+  border: 2px solid #1f4ba5;
+  background: url(Forms-assets/icon-facebook.png) no-repeat 50% 50%;
+}
+.twitter-login-icon{
+  border: 2px solid #00adf2;
+  background: url(Forms-assets/icon-twitter.png) no-repeat 50% 50%;
+}
+.sign-up-or-find-icon:after, .sign-up-or-find-icon::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.sign-up-or-find:before, .sign-up-or-find:before{
+  content: "";
+  display: block;
+  margin: 20px;
+  border-bottom: 1px solid #f6f6f6;
+}
+.sign-up-or-find-icon{
+  margin-left: 40px;
+}
+.sign-up-or-find-icon li{
+  display: inline-block;
+  text-align: center;
+}
+.sign-up-or-find-icon a{
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Varela Round';
+  font-size: 0.8rem;
+  color: #1f4ba5;
+}
+.btn-exit{
+  background: url(Forms-assets/icon-exit.png) no-repeat;
+  border: 0;
+  width: 8px;
+  height: 8px;
+  text-indent: -9999em;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

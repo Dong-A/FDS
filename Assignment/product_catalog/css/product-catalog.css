@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.product-list-wrapper{
+  width: 740px;
+}
+.product-list-wrapper ul li{
+  list-style-type: none;
+}
+.hidden{
+  display: none;
+}
+
+
+.product-image{
+  float: left;
+}
+.product-column:after, .product-column::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+li{
+  float: left;
+}
+.product-name p{
+  width: 160px;
+  font-family: 'Varela Round';
+  font-size: 0.8rem;
+  margin: 25px 25px 10px 25px;
+}
+.product-name span{
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-size: 0.7rem;
+  color: #c7c7c7;
+  margin: 20px 25px;
+}
+.product-price{
+  width: 40px;
+  margin: 35px 10px 20px 25px;
+  font-family: 'Oswald';
+  font-weight: bold;
+  font-size: 0.9rem;
+
+}
+.product-price span{
+  width: 34px;
+  height: 15px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+  margin-top: 15px;
+}
+.boot-price{
+  color: #ff3f2b;
+}
+.product-price .new-icon {background: url(Product_Catalog_Elements-assets/icon-new.png) no-repeat;}
+.product-price .sale-icon {background: url(Product_Catalog_Elements-assets/icon-sale.png) no-repeat;}
+.product-price .hit-icon {background: url(Product_Catalog_Elements-assets/icon-Hit.png) no-repeat;}
+
+fieldset{
+  width: 230px;
+  border: 0;
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 0;
+}
+.select-box{
+  -webkit-appearance: none;  /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+  background: url(Product_Catalog_Elements-assets/icon-select-list-arrow.png) no-repeat 80% 50%;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  width: 90px;
+  padding: 7px 15px;
+  border: 0;
+  margin-right: 5px;
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: #c7c7c7;
+
+}
+.btn-add-to-cart{
+  width: 110px;
+  background-color: #1f4ba5;
+  color: #fff;
+  font-family: 'Varela Round';
+  font-size: 0.7rem;
+  padding: 7px 20px;
+  border: 0;
+  border-radius: 15px;
+}
+.btn-add-to-wishilist{
+  margin-top: 10px;
+  margin-left: 10px;;
+  padding-left: 25px;
+  background: url(Product_Catalog_Elements-assets/icon-add-to-wishlist.png) no-repeat left;
+  background-color: #fff;
+  border: 0;
+  font-family: 'PT Serif';
+  font-style: italic;
+  color: #c7c7c7;
+}

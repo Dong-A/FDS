@@ -1,0 +1,6 @@
+[Tue Sep 27 2016 17:25:44 GMT+0900 (KST)] layer "komolkuchkarov@gmail.com": Unsupported extension: com
+[Tue Sep 27 2016 17:26:58 GMT+0900 (KST)] layer "icon-password-area.icon": Unsupported extension: icon
+[Tue Sep 27 2016 17:28:00 GMT+0900 (KST)] layer "icon-twitter.svg, icon-twitter.png, 200% icon-twitter.svg": Duplicate path: icon-twitter.svg
+[Tue Sep 27 2016 17:28:46 GMT+0900 (KST)] layer "icon-facebook.svg, icon-facebook.png, 200% icon-facebook.png": Duplicate path: icon-facebook.png
+[Tue Sep 27 2016 17:29:08 GMT+0900 (KST)] layer "icon-login.svg, icon-login.png, 200% icon-login.svg": Duplicate path: icon-login.svg
+[Tue Sep 27 2016 17:29:27 GMT+0900 (KST)] layer "icon-exit.svg, icon-exit.png, 200% icon-exit.png": Duplicate path: icon-exit.png
