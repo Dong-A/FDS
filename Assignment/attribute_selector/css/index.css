@@ -1,0 +1,67 @@
+/* Common ------------------------------------------------------------------------------*/
+nav ul, nav ol, .reset-list{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+nav a, .reset-list a {
+  text-decoration: none;
+}
+/* <a> 상태 디자인 */
+nav a:link, .reset-list a:link {color: black;}
+nav a:hover, .reset-list a:hover {color: blue;}
+nav a:visited, .reset-list a:visited {color: violet;}
+nav a:active, .reset-list a:active {color: powderblue;}
+nav a:focus, .reset-list a:focus {color: pink;}
+/* External Link List------------------------------------------------------------------ */
+
+.external-list a[href^="http://"][target="_blank"],
+.external-list a[href^="https://"][target="_blank"] {
+  padding-right: 1em;
+  background: url("icons/external-link/External Link.svg") no-repeat right 1px;
+  background-size: 13px 13px;
+}
+.external-list a[target="_blank"]:focus {
+  background-color: tomato;
+}
+
+/* File Format List-------------------------------------------------------------------- */
+.file-format-list a{
+  padding-left: 1.3em;
+}
+
+.file-format-list a[title="HTML"] {
+  background: url("icons/file-type-collection/svg/html.svg") no-repeat
+}
+.file-format-list a[title="CSS"] {
+  background: url("icons/file-type-collection/svg/css.svg") no-repeat
+}
+.file-format-list a[title="Javascript"] {
+  background: url("icons/file-type-collection/svg/javascript.svg") no-repeat
+}
+.file-format-list a:focus {
+  background-color: tomato;
+}
+
+/* SNS List---------------------------------------------------------------------------- */
+.sns-list li{
+  float: left;
+  margin-right: 10px;
+}
+.sns-list a{
+  text-decoration: none;
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999rem;
+}
+.sns-list a[href*="facebook"]{background-image: url("icons/SNS/facebook.png")}
+.sns-list a[href*="google"]{background-image: url("icons/SNS/Google-+.png")}
+.sns-list a[href*="instagram"]{background-image: url("icons/SNS/Instagram.png")}
+.sns-list a[href*="linkedin"]{background-image: url("icons/SNS/LinkedIn.png")}
+.sns-list a[href*="twitter"]{background-image: url("icons/SNS/Twitter.png")}
+
+.sns-list a:focus {
+  outline: 3px solid tomato;
+}
