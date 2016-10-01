@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body{
+  margin: 0;
+}
+.box {
+  background-color: blue;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  text-align: center;
+  font-size: 4;
+}

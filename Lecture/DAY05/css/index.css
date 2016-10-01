@@ -1,0 +1,51 @@
+@charset "UTF-8";
+body{
+  margin: 0;
+  font: 1rem/1.5 "Spoqa Han Sans", Sans-Serif;
+}
+
+.BioRhyme{
+  font-family: 'BioRhyme', serif;
+}
+.magazine-header{
+  float: left;
+}
+
+.magazine-headline{
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-100%);
+  width: 100vh;
+}
+.magazine-header * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+header img{
+  width: auto;
+  height: 100vh;
+  margin-left: 100px;
+}
+
+.article-1{
+  float: left;
+  width: 40vw;
+}
+
+.article-1 img{
+  float: left;
+  position: relative;
+  left: 20px;
+  margin: 0;
+  z-index: 0;
+}
+.article-1::after{
+  content: "";
+  display: block;
+  height: 40px;
+  width: 300px;
+  background: url(images/bar.png) no-repeat;
+
+}
