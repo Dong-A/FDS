@@ -1,0 +1,6 @@
+[Thu Oct 06 2016 09:54:06 GMT+0900 (KST)] layer "icon-arrow-down.svg, icon-arrow-down.png, 200% icon-arrow-down@2x.png": Duplicate path: icon-arrow-down.svg
+[Thu Oct 06 2016 09:54:06 GMT+0900 (KST)] layer "icon-arrow-down.svg, icon-arrow-down.png, 200% icon-arrow-down@2x.png": Duplicate path: icon-arrow-down.png
+[Thu Oct 06 2016 09:54:06 GMT+0900 (KST)] layer "icon-arrow-down.svg, icon-arrow-down.png, 200% icon-arrow-down@2x.png": Duplicate path: icon-arrow-down@2x.png
+[Thu Oct 06 2016 09:54:20 GMT+0900 (KST)] layer "icon-arrow-down.svg, icon-arrow-down.png, 200% icon-arrow-down@2x.png": Duplicate path: icon-arrow-down.svg
+[Thu Oct 06 2016 09:54:20 GMT+0900 (KST)] layer "icon-arrow-down.svg, icon-arrow-down.png, 200% icon-arrow-down@2x.png": Duplicate path: icon-arrow-down.png
+[Thu Oct 06 2016 09:54:20 GMT+0900 (KST)] layer "icon-arrow-down.svg, icon-arrow-down.png, 200% icon-arrow-down@2x.png": Duplicate path: icon-arrow-down@2x.png

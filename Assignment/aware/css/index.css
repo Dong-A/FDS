@@ -1,0 +1,113 @@
+/* ============================================
+ 초 기 값  설 정
+ ============================================ */
+ body {
+   background-image: url(../images/leading-10.png), url(../images/col-120.png);
+   font-size: 0.875rem;
+   line-height: 1.25rem;
+   font-family: "Verela Round" sans-serif;
+   width: 1440px;
+   margin: 0;
+ }
+ .container {
+   margin-left: auto;
+   margin-right: auto;
+ }
+ ul, li {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+ a {
+   text-decoration: none;
+ }
+img {
+  vertical-align: top;
+}
+
+/* 컬 럼 */
+.col-1 {
+  width: 120px;
+}
+.col-2 {
+  width: 240px;
+}
+.col-3 {
+  width: 360px;
+}
+.col-4 {
+  width: 480px;
+}
+.col-5 {
+  width: 600px;
+}
+.col-6 {
+  width: 720px;
+}
+.col-7 {
+  width: 840px;
+}
+.col-8 {
+  width: 960px;
+}
+
+
+
+/* ============================================
+ 헤 더
+ ============================================ */
+ .header::after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+.logo, .main-menu li, .info-menu li {
+  float: left;
+}
+.info-menu-wrap {
+  float: right;
+}
+.main-menu li, .info-menu li {
+  margin-top: 1.875rem;
+  margin-right: 50px;
+}
+.logo, .basket, .my-info, .search {
+  display: inline-block;
+  text-indent: -9999rem;
+}
+.logo {
+  background: url(../images/svg-icon-logo.svg) no-repeat 50% 0, url(../images/svg-icon-hamberger.svg) no-repeat 10% 50%;
+  width: 240px;
+  height: 1.25rem;
+  margin-top: 1.875rem;
+  margin-bottom: 0;
+}
+.basket {
+  background: url(../images/svg-icon-bag.svg) no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.my-info {
+  background: url(../images/svg-icon-face.svg) no-repeat;
+  width: 14px;
+  height: 15px;
+}
+.search {
+  background: url(../images/svg-icon-search.svg) no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+/* ============================================
+ 슬 라 이 더
+ ============================================ */
+
+.slider {
+  position: relative;
+}
+.main-slider img {
+  float: left;
+}
+.main-slider-info {
+  position: absolute;
+}

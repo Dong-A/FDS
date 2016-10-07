@@ -17,6 +17,12 @@ body.guide {
   margin-left: auto;
   margin-right: auto;
 }
+.left-section {
+  float: left;
+}
+ul, ol, dl {
+  margin: 0;
+}
 
 /* 각 섹션의 헤더 영역 */
 .section {
@@ -92,11 +98,107 @@ h6 {
   Lists
 =======================================================================*/
 /* 비순차 목록 */
+/*.ul *, .ol *, .dl * {
+
+}*/
+.ul-li-1 {
+  overflow: hidden;
+  position: relative;
+}
+.ul-li-1::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -2px;
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border: 1px solid #44cb83;
+  border-radius: 50%;
+}
+.ul-li-1 ul, .ul-li-2 ul{
+  padding: 0;
+}
+.ul-li-1 li, .ul-li-2 li {
+  overflow: hidden;
+  position: relative;
+  padding-left: 1em;
+}
+.ul-li-1 li::before, .ul-li-2 li::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -2px;
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border: 1px solid #44cb83;
+  border-radius: 50%;
+}
 .ul, .ol, .dl {
   float: left;
   padding-left: 30px;
 }
+.ul-li-1, .ul-li-2, .ol-li-1, .ol-li-2, .dl-dt-1, .dl-dt-2 {
+  margin-top: 1.3125rem;
+}
 .dl {
   width: 285px;
 }
-.
+
+/*=======================================================================
+  Color
+=======================================================================*/
+.color-box {
+  /*display: inline-block;*/
+  width: 100px;
+  height: 105px;
+  text-align: center;
+}
+.color-box-list li{
+  float: left;
+  list-style-type: none;
+}
+.color-box-list span {
+  display: block;
+  line-height: 100px;
+  color: #fff;
+}
+.color-box-list p {
+  font-size: 0.75rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.default-color span {
+  background-color: #787f94;
+}
+.primary-color span {
+  background-color: #7171ef;
+}
+.success-color span {
+  background-color: #44cb83;
+}
+.info-color span {
+  background-color: #63a2fc;
+}
+.danger-color span {
+  background-color: #ff5448;
+}
+.warning-color span {
+  background-color: #fcb409;
+}
+.color::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*=======================================================================
+  Tables
+=======================================================================*/
+.tables table * {
+  border: 1px solid black;
+}
