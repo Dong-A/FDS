@@ -9,7 +9,7 @@
 </head>
 <body class="container guide">
   <div class="left-section">
-    <section class="typography section">
+    <section class="section-typography section">
       <header class="header">
         <h1>Typography</h1>
       </header>
@@ -25,20 +25,20 @@
         <p>고양이를 사랑하는 이들이 한 번쯤 관심 가질 블랙팬서와 역대 가장 원작 캐릭터의 성격을 잘 살려주고 있다고 생각되는 스파이더맨이 첫 등장을 하며 존재감을 확실히 굳혔다. 둘 다 솔로 영화 제작을 앞두고 있기에 더욱 관심 가는 캐릭터가 아닐 수 없는데, 굳이 따지자면 닥터 스트레인지와 각별한 관계인 스파이더맨에 더욱 기대가 실린다. 블랙팬서는 더 많은 비중으로 등장하지만, 짧게 등장한 스파이더맨에 비해 임팩트는 좀 덜한 듯했다.</p>
       </div>
     </section>
-    <section class="lists section">
+    <section class="section-lists section">
       <header class="header">
         <h1>Lists</h1>
       </header>
-      <div class="ul">
+      <div class="ul-wrap">
         <ul>
-          <li class="ul-li-1">비순차 목록
+          <li class="ul-1">비순차 목록
             <ul>
               <li>하위 목록</li>
               <li>하위 목록</li>
               <li>하위 목록</li>
             </ul>
           </li>
-          <li class="ul-li-2">비순차 목록
+          <li class="ul-2">비순차 목록
             <ul>
               <li>하위 목록</li>
               <li>하위 목록</li>
@@ -47,36 +47,38 @@
           </li>
         </ul>
       </div>
-      <div class="ol">
-        <ol>
-          <li class="ol-li-1">순차 목록
+      <div class="ol-wrap">
+        <ol class="ol">
+          <li><div class="ol-1">순차 목록</div>
             <ol>
-              <li>하위 목록</li>
-              <li>하위 목록</li>
-              <li>하위 목록</li>
+              <li><div class="ol-1-1">하위 목록</div></li>
+              <li><div class="ol-1-1">하위 목록</div></li>
+              <li><div class="ol-1-1">하위 목록</div></li>
             </ol>
           </li>
-          <li class="ol-li-2">순차 목록
+          <li><div class="ol-2">순차 목록</div>
             <ol>
-              <li>하위 목록</li>
-              <li>하위 목록</li>
-              <li>하위 목록</li>
+              <li><div class="ol-2-1">하위 목록</div></li>
+              <li><div class="ol-2-1">하위 목록</div></li>
+              <li><div class="ol-2-1">하위 목록</div></li>
             </ol>
           </li>
         </ol>
       </div>
-      <div class="dl">
-        <dl>
-          <dt class="dl-dt-1">창의적 문제해결</dt>
-          <dd>더 향상된 결과를 위해, 폭넓은 시각에서 다양한 관점을 통합해 새로운 해결안을 제시함</dd>
-          <dt class="dl-dt-2">창의적 문제해결 도구</dt>
-          <dd>잘 알려진 창의적 문제 해결법 도출을 위한 방법론들로는 브레인 스토밍, 마인드 맵 등이 있다.</dd>
+      <div class="dl-wrap">
+        <dl class="dl">
+          <dt class="dl-dt">창의적 문제해결</dt>
+          <dd class="dl-dd">더 향상된 결과를 위해, 폭넓은 시각에서 다양한 관점을 통합해 새로운 해결안을 제시함</dd>
+          <dt class="dl-dt">창의적 문제해결 도구</dt>
+          <dd class="dl-dd">잘 알려진 창의적 문제 해결법 도출을 위한 방법론들로는 브레인 스토밍, 마인드 맵 등이 있다.</dd>
         </dl>
       </div>
     </section>
   </div>
-  <div>
-    <section class="color section">
+  <div class="right-section">
+
+    <section class="section-color section">
+      <h1>Color</h1>
       <ul class="color-box-list">
         <li><div class="default-color color-box"><span>#787f94</span></div><p>default</p></li>
         <li><div class="primary-color color-box"><span>#7171ef</span></div><p>primary</p></li>
@@ -91,8 +93,9 @@
       <div></div>
       <div></div>
     </section>
-    <section class="tables section">
-      <table>
+    <section class="section-tables section">
+      <h1>Tables</h1>
+      <table class="table-1">
         <tr>
           <th>제목</th>
           <th>종류</th>
@@ -129,7 +132,7 @@
           <td>-</td>
         </tr>
       </table>
-      <table>
+      <table class="table-2">
         <tr>
           <th colspan="2"></th>
           <!-- <th></th> -->
