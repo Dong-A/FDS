@@ -6,7 +6,7 @@ body, ul, li, p {
 }
 
 body {
-  /*background-image: url(../images/leading-10.png), url(../images/col-120.png);*/
+  background-image: url(../images/leading-10.png), url(../images/col-120.png);
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #222222;
@@ -443,6 +443,8 @@ p {
   text-transform: uppercase;
   color: #1f4ba5;
   letter-spacing: 0.1em;
+  margin-bottom: 4.375rem;
+  background: url(../images/svg-icon-chat-double.svg) no-repeat 30px;
 }
 .testimonials-box blockquote {
   font-size: 1.125rem;
@@ -450,4 +452,33 @@ p {
   font-family: "PT Serif";
   font-style: italic;
   color: #868686;
+}
+.komol {
+  display: inline-block;
+}
+.komol figcaption {
+  float: right;
+  width: 130px;
+  margin-top: 0.625rem;
+  margin-left: 1em;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-family: "Varela Round";
+  text-align: left;
+}
+.komol figcaption span {
+  font-size: 0.75rem;
+  font-family: "PT Serif";
+  font-style: italic;
+  color: #dbdbdb;
+}
+.testimonials-box button {
+  position: absolute;
+  top: -5px;
+  right: 30px;
+  border: 1px solid #ececec;
+  background: url(../images/icon-reload.svg) no-repeat 50% 50%;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999rem;
 }
