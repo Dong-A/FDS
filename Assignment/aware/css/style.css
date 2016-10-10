@@ -6,7 +6,7 @@ body, ul, li, p {
 }
 
 body {
-  background-image: url(../images/leading-10.png), url(../images/col-120.png);
+  /*background-image: url(../images/leading-10.png), url(../images/col-120.png);*/
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #222222;
@@ -286,7 +286,7 @@ p {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);;
+  transform: translateX(-50%) translateY(-50%);
 }
 .featured-box span:last-child {
   position: absolute;
