@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .toggle-button-set {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1em;
+      background-color: black;
+      color: #fff;
+    }
+    .toggle-button-set button {
+      cursor: pointer;
+      border: none;
+      border-radius: 15px;
+      padding: 0.7rem 1.4rem;
+      background: silver;
+    }
+  </style>
+</head>
+<body class="container">
+  <div class="toggle-button-set" role="group">
+    <button type="button" class="btn-show-grid">show grid</button>
+    <button type="button" class="btn-hide-grid">hide grid</button>
+  </div>
+  <script src="core.js"></script>
+</body>
+</html>

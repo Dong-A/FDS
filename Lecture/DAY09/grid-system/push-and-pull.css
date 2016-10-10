@@ -1,0 +1,65 @@
+
+.col-row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  height: 120px;
+}
+
+
+.col-1 { width: 120px; background-color: pink;}
+.col-2 { width: 240px; background-color: yellow;}
+.col-3 { width: 360px; background-color: blue;}
+.col-4 { width: 480px; background-color: green;}
+.col-5 { width: 600px; background-color: violet;}
+.col-6 { width: 720px; background-color: tomato;}
+.col-7 { width: 840px; background-color: powderblue;}
+.col-8 { width: 960px; background-color: grey;}
+
+
+[class*="push-"], [class*="pull-"] {
+  position: relative;
+}
+
+.push-1 { left: 120px; }
+.push-2 { left: 240px; }
+.push-3 { left: 360px; }
+.push-4 { left: 480px; }
+.push-5 { left: 600px; }
+.push-6 { left: 720px; }
+.push-7 { left: 840px; }
+.push-8 { left: 960px; }
+
+
+.pull-1 { left: 120px; }
+.pull-2 { left: 240px; }
+.pull-3 { left: 360px; }
+.pull-4 { left: 480px; }
+.pull-5 { left: 600px; }
+.pull-6 { left: 720px; }
+.pull-7 { left: 840px; }
+.pull-8 { left: 960px; }
+
+/* Module: Prefix, suffix */
+.prefix-1 { margin-left: 120px;}
+.suffix-1 {margin-right: 120px;}
+.prefix-2 { margin-left: 240px;}
+.suffix-2 {margin-right: 240px;}
+.prefix-3 { margin-left: 360px;}
+.suffix-3 {margin-right: 360px;}
+.prefix-4 { margin-left: 480px;}
+.suffix-4 {margin-right: 480px;}
+.prefix-5 { margin-left: 600px;}
+.suffix-5 {margin-right: 600px;}
+.prefix-6 { margin-left: 720px;}
+.suffix-6 {margin-right: 720px;}
+.prefix-7 { margin-left: 840px;}
+.suffix-7 {margin-right: 840px;}
+.prefix-8 { margin-left: 960px;}
+.suffix-8 {margin-right: 960px;}
