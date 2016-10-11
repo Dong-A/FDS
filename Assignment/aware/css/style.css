@@ -31,32 +31,34 @@ p {
 }
 
 /* 컬 럼 */
-.col-1 {
-  width: 120px;
+.col-1 { width: 120px; }
+.col-2 { width: 240px; }
+.col-3 { width: 360px; }
+.col-4 { width: 480px; }
+.col-5 { width: 600px; }
+.col-6 { width: 720px; }
+.col-7 { width: 840px; }
+.col-8 { width: 960px; }
+
+/* isolate */
+.row.isolate [class*="col-"] {
+  margin-right: -100%;
 }
-.col-2 {
-  width: 240px;
-}
-.col-3 {
-  width: 360px;
-}
-.col-4 {
-  width: 480px;
-}
-.col-5 {
-  width: 600px;
-}
-.col-6 {
-  width: 720px;
-}
-.col-7 {
-  width: 840px;
-}
-.col-8 {
-  width: 960px;
-}
+.row.isolate .order-1 { margin-left: 0;}
+.row.isolate .order-2 { margin-left: 120px; }
+.row.isolate .order-3 { margin-left: 240px; }
+.row.isolate .order-4 { margin-left: 360px; }
+.row.isolate .order-5 { margin-left: 480px; }
+.row.isolate .order-6 { margin-left: 600px; }
+.row.isolate .order-7 { margin-left: 720px; }
+.row.isolate .order-8 { margin-left: 840px; }
 
 
+
+
+
+/* Box */
+.box { height: 120px; }
 
 /* ============================================
  Header
@@ -447,11 +449,22 @@ p {
   background: url(../images/svg-icon-chat-double.svg) no-repeat 30px;
 }
 .testimonials-box blockquote {
+  position: relative;
   font-size: 1.125rem;
   line-height: 1.875rem;
   font-family: "PT Serif";
   font-style: italic;
   color: #868686;
+}
+.testimonials-box blockquote::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 13px;
+  height: 11px;
+  left: 50%;
+  top: -1.875rem;
+  background: url(../images/svg-icon-quote.svg) no-repeat;
 }
 .komol {
   display: inline-block;
@@ -481,4 +494,182 @@ p {
   width: 30px;
   height: 30px;
   text-indent: -9999rem;
+}
+
+
+/* ============================================
+ about
+ ============================================ */
+
+/* 칼럼 설정 */
+[class*="col-"] {
+  float: left;
+  margin: 0;
+}
+.row::after, .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-col-1 { width: 60px; }
+.about-col-2 { width: 120px; }
+.about-col-3 { width: 180px; }
+.about-col-4 { width: 240px; }
+.about-col-5 { width: 300px; }
+.about-col-6 { width: 360px; }
+.about-col-7 { width: 420px; }
+.about-col-8 { width: 480px; }
+
+/* isolate - about */
+.about-image-box .row.isolate .order-1 { margin-left: 0; }
+.about-image-box .row.isolate .order-2 { margin-left: 60px; }
+.about-image-box .row.isolate .order-3 { margin-left: 120px; }
+.about-image-box .row.isolate .order-4 { margin-left: 180px; }
+.about-image-box .row.isolate .order-5 { margin-left: 240px; }
+.about-image-box .row.isolate .order-6 { margin-left: 300px; }
+.about-image-box .row.isolate .order-7 { margin-left: 360px; }
+.about-image-box .row.isolate .order-8 { margin-left: 420px; }
+
+
+
+.about {
+  width: 480px;
+  height: 480px;
+  float: left;
+  position: relative;
+  border-left: 1px solid #ececec;
+  box-sizing: border-box;
+}
+.about-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  text-align: center;
+}
+.about-box h2 {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  font-family: "Oswald";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1f4ba5;
+  letter-spacing: 0.1em;
+  margin-bottom: 2.5rem;
+  background: url(../images/svg-icon-briefcase.svg) no-repeat 30px;
+}
+.about-image-box {
+  height: 120px;
+}
+.about-brands-box, .about-countries-box {
+  background-color: #1f4ba5;
+}
+.about-brands-box-wrap,
+.about-countries-box-wrap {
+  height: 60px;
+}
+.about-brands-box-wrap {
+  background: url(../images/svg-icon-storage.svg) no-repeat 20px;
+}
+.about-countries-box-wrap {
+  background: url(../images/svg-icon-map.svg) no-repeat 20px;
+}
+.about-brands-box-wrap p,
+.about-countries-box-wrap p {
+  height: 60px;
+  font-family: "Oswald";
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.125rem;
+  text-align: left;
+  letter-spacing: 0.1em;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 10px;
+
+}
+.about-brands-box span, .about-countries-box span {
+  display: block;
+  font-family: "PT Serif";
+  font-style: italic;
+  font-size: 0.75rem;
+  letter-spacing: normal;
+}
+.about-box blockquote {
+  position: relative;
+  display: block;
+  margin-top: 3.125rem;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-family: "PT Serif";
+  font-style: italic;
+  color: #868686;
+}
+.about-box blockquote::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 13px;
+  height: 11px;
+  left: 50%;
+  top: -1.25rem;
+  background: url(../images/svg-icon-quote.svg) no-repeat;
+}
+
+.about-box > p {
+  width: 438px;
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-family: "Varela Round";
+}
+
+/* ============================================
+ brands
+ ============================================ */
+.brands {
+  display: block;
+}
+.brands li{
+  float: left;
+  text-indent: -9999rem;
+  border-left: 1px solid #ececec;
+  box-sizing: border-box;
+}
+.brands li:first-child {
+  background: url(../images/icon-H&M.png) no-repeat 50% 50%;
+  border-left: 0;
+}
+.brands li:nth-child(2) { background: url(../images/icon-PUMA.png) no-repeat 50% 50%;}
+.brands li:nth-child(3) { background: url(../images/icon-adidas.png) no-repeat 50% 50%; }
+.brands li:nth-child(4) { background: url(../images/icon-CONVERSE.png) no-repeat 50% 50%; }
+.brands li:nth-child(5) { background: url(../images/icon-BOSS.png) no-repeat 50% 50%; }
+.brands li:nth-child(6) { background: url(../images/icon-Nike.png) no-repeat 50% 50%; }
+.brands li:nth-child(7) { background: url(../images/icon-Crown.png) no-repeat 50% 50%; }
+.brands li:last-child {
+  text-indent: 0;
+  text-align: center;
+  position: relative;
+}
+.brands li:last-child a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: #1f4ba5;
+  text-transform: uppercase;
+}
+/* ============================================
+ footer
+ ============================================ */
+.footer-main-menu li {
+  float: left;
 }
