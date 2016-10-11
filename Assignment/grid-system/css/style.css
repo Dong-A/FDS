@@ -5,6 +5,16 @@
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
+}
+.container.show-baseline {
+  background: linear-gradient(transparent 10px, powderblue 10px);
+  background-size: 1px 11px;
+}
+.container.show-columns {
+  background: linear-gradient(90deg, transparent 8px, pink 8px, tomato 107px, transparent 107px);
+  background-size: 115px 1px;
+}
+.container.show-grid {
   background: linear-gradient(transparent 10px, powderblue 10px), linear-gradient(90deg, transparent 8px, pink 8px, tomato 107px, transparent 107px);
   background-size: 1px 11px, 115px 1px;
 }
@@ -28,6 +38,8 @@
 .box:nth-child(10n) {background: #924922; }
 .box:nth-child(11n) {background: #32a40f; }
 .box:nth-child(12n) {background: #831d34; }
+
+/* button */
 
 
 /* clearfix & row */
