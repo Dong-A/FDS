@@ -1,3 +1,0 @@
-function = percent(x, y) {
-
-}

@@ -84,3 +84,9 @@
 .row.isolate .order-10 { margin-left: 1043px; }
 .row.isolate .order-11 { margin-left: 1158px; }
 .row.isolate .order-12 { margin-left: 1273px; }
+
+
+/* button */
+.toggle-btn-set {
+  height: 22px;
+}

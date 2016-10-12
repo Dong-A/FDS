@@ -17,19 +17,28 @@ console.log('hide_grid_btn: ', hide_grid_btn);
 
 //baseline
 show_baseline_btn.onclick = function() {
-  var pre_assigned_class = container.getAttribute('class');
-  container.setAttribute('class', pre_assigned_class + ' ' + 'show-baseline');
+  var _container = document.querySelector('.container');
+  if (!_container.classList.contains('show-baseline')) {
+    _container.classList.add('show-baseline');
+  }
 };
+
 hide_baseline_btn.onclick = function() {
-  pre_assigned_class = container.getAttribute('class');
+  var pre_assigned_class = container.getAttribute('class');
   remove_class = pre_assigned_class.replace('show-baseline', '');
   container.setAttribute('class', remove_class.trim());
 };
 
 //columns
 show_columns_btn.onclick = function() {
-  pre_assigned_class = container.getAttribute('class');
-  container.setAttribute('class', pre_assigned_class + ' ' + 'show-columns');
+  var pre_assigned_class = container;
+  if (pre_assigned_class.classList.contains('show-columns')) {
+    pre_assigned_class.classList.remove('show-columns');
+  } else {
+    pre_assigned_class.classList.add('show-columns');
+  }
+  // container.setAttribute('class', pre_assigned_class + ' ' + 'show-columns');
+
 };
 
 hide_columns_btn.onclick = function() {
