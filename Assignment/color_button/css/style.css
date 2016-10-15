@@ -1,10 +1,8 @@
-body {
-  margin: 0;
-}
-
 .contianer {
   width: 1920px;
 }
+
+
 
 .col-1 { width: 120px; }
 .col-2 { width: 240px; }
@@ -22,3 +20,7 @@ body {
 .col-14 { width: 1680px; }
 .col-15 { width: 1800px; }
 .col-16 { width: 1920px; }
+
+input:hover {
+  content: "Men";
+}
