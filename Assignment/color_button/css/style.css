@@ -1,26 +1,52 @@
-.contianer {
-  width: 1920px;
+body {
+  margin: 0;
 }
 
-
-
-.col-1 { width: 120px; }
-.col-2 { width: 240px; }
-.col-3 { width: 360px; }
-.col-4 { width: 480px; }
-.col-5 { width: 600px; }
-.col-6 { width: 720px; }
-.col-7 { width: 840px; }
-.col-8 { width: 960px; }
-.col-9 { width: 1080px; }
-.col-10 { width: 1200px; }
-.col-11 { width: 1320px; }
-.col-12 { width: 1440px; }
-.col-13 { width: 1560px; }
-.col-14 { width: 1680px; }
-.col-15 { width: 1800px; }
-.col-16 { width: 1920px; }
-
-input:hover {
-  content: "Men";
+.container {
+  height: 100vh;
+}
+.button-wrap {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 100%;
+}
+.button-wrap a {
+  text-decoration: none;
+  color: white;
+  /*text-shadow: -1px -1px hsla(0, 0%, 0%, 0.82);*/
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 100%;
+  display: block;
+  font-family: 'Bungee', cursive;
+  font-weight: bold;
+  font-size: 20px;
+  /*border-bottom: 2px solid #525252;*/
+  transition: all 0.1s;
+  position: absolute;
+}
+.button:active {
+  transform: translateY(2px);
+  /*border-bottom: 1px solid #494647;*/
+}
+.button-1 {
+  background-color: #ff0000;
+  left: -10%;
+  top: 10%;
+}
+.button-2 {
+  background-color: #00ff00;
+  left: 35%;
+  top: 85%;
+}
+.button-3 {
+  background-color: #0000ff;
+  right: -10%;
+  top: 10%;
 }
