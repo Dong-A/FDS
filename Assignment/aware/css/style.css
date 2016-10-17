@@ -30,6 +30,10 @@ p {
   color: #868686;
 }
 
+/* ============================================
+ 모 듈
+ ============================================ */
+
 /* 컬 럼 */
 .col-1 { width: 120px; }
 .col-2 { width: 240px; }
@@ -53,7 +57,12 @@ p {
 .row.isolate .order-7 { margin-left: 720px; }
 .row.isolate .order-8 { margin-left: 840px; }
 
-
+/* 폰 트 */
+.oswald {
+  font-family: "Oswald";
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
 
 
 
@@ -123,11 +132,8 @@ p {
 }
 .main-slider-info > span:first-child {
   font-size: 0.75rem;
-  font-family: "Oswald";
-  font-weight: bold;
   text-transform: uppercase;
   color: #1f4ba5;
-  letter-spacing: 0.1em;
 }
 .product-name {
   margin-top: 1.25rem;
@@ -154,9 +160,8 @@ p {
 .product-buy-btn span {
   color: #fff;
   font-size: 0.75rem;
-  font-family: "Oswald";
+  font-weight: normal;
   margin-left: 2em;
-  letter-spacing: 0.1em;
 }
 .product-buy-btn a {
   color: #fff;
@@ -217,10 +222,7 @@ p {
 .banner-1-info span, .banner-2-info span, .banner-3-info span {
   color: #1f4ba5;
   font-size: 0.75rem;
-  font-family: "Oswald";
-  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 .banner-1-info div {
   font-size: 1.5rem;
@@ -261,11 +263,8 @@ p {
 .featured-box-head-info h2 {
   font-size: 1.125rem;
   line-height: 1.875rem;
-  font-family: "Oswald";
-  font-weight: bold;
   text-transform: uppercase;
   color: #1f4ba5;
-  letter-spacing: 0.1em;
   position: absolute;
   left: 50%;
   top: 5rem;
@@ -292,9 +291,6 @@ p {
 }
 .featured-box span:last-child {
   position: absolute;
-  font-family: "Oswald";
-  font-weight: bold;
-  letter-spacing: 0.1em;
   bottom: 1.875rem;
   left: 50%;
   transform: translateX(-50%);
@@ -336,11 +332,8 @@ p {
   width: 50px;
   font-size: 1.125rem;
   line-height: 1.875rem;
-  font-family: "Oswald";
-  font-weight: bold;
   text-transform: uppercase;
   color: #1f4ba5;
-  letter-spacing: 0.1em;
   position: absolute;
   left: 50%;
   top: 5rem;
@@ -395,11 +388,8 @@ p {
 }
 .blog-box-info-1 div:nth-child(3) {
   font-size: 0.625rem;
-  font-family: "Oswald";
-  font-weight: bold;
   text-transform: uppercase;
   color: #bfbcb9;
-  letter-spacing: 0.1rem;
 }
 .blog-box-info-1 div:nth-child(3) span {
   font-family: "PT Serif";
@@ -440,11 +430,8 @@ p {
 .testimonials-box h2 {
   font-size: 1.125rem;
   line-height: 1.875rem;
-  font-family: "Oswald";
-  font-weight: bold;
   text-transform: uppercase;
   color: #1f4ba5;
-  letter-spacing: 0.1em;
   margin-bottom: 4.375rem;
   background: url(../images/svg-icon-chat-double.svg) no-repeat 30px;
 }
@@ -552,11 +539,8 @@ p {
 .about-box h2 {
   font-size: 1.125rem;
   line-height: 1.875rem;
-  font-family: "Oswald";
-  font-weight: bold;
   text-transform: uppercase;
   color: #1f4ba5;
-  letter-spacing: 0.1em;
   margin-bottom: 2.5rem;
   background: url(../images/svg-icon-briefcase.svg) no-repeat 30px;
 }
@@ -579,12 +563,9 @@ p {
 .about-brands-box-wrap p,
 .about-countries-box-wrap p {
   height: 60px;
-  font-family: "Oswald";
-  font-weight: bold;
   color: #fff;
   font-size: 1.125rem;
   text-align: left;
-  letter-spacing: 0.1em;
   position: absolute;
   margin-left: 50px;
   margin-top: 10px;
@@ -660,10 +641,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-family: "Oswald";
-  font-weight: bold;
   font-size: 0.875rem;
-  letter-spacing: 0.1em;
   color: #1f4ba5;
   text-transform: uppercase;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID 반응형</title>
+  <link rel="stylesheet" href="Assignment/Modules/CSS/initialization/normalize.min.css">
+  <link rel="stylesheet" href="grid-system-mobile-first.css">
+  <style>
+    html {
+      background-color: skyblue;
+    }
+    .app {
+      min-height: 100vh;
+      /*padding: 2rem;*/
+      background-color: tomato;
+      color: white;
+    }
+    .app .row h1 {
+      background-color: white;
+      color: tomato;
+    }
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="app container show-grid">
+    <div class="row">
+      <div class="column">
+        <h1>Mobile First</h1>
+      </div>
+      <div class="column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex tempore nihil itaque iste corporis, nostrum cum, accusantium vel possimus. Repudiandae beatae, voluptates error vero asperiores provident, numquam impedit reiciendis suscipit, magni, tenetur optio quaerat harum velit illum? Nisi dolore esse, atque harum ipsa odio fuga facere dicta eligendi eos explicabo.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column m1-2 t1-2 d1-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore error nihil ullam impedit, cum voluptate numquam pariatur natus ipsa tempora?</p>
+      </div>
+      <div class="column m1-2 t1-2 d1-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia blanditiis sunt odit quisquam impedit dolore nisi distinctio voluptas laborum veniam.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
