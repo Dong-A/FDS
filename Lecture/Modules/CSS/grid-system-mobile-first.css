@@ -205,3 +205,19 @@
   .d-full { width: 100%; }
 
 }
+
+/* push & pull */
+/* 확인 필요 */
+[class*="push-"], [class*="pull-"] {
+  position: relative;
+}
+
+.m-push-1 { left: 0; }
+.m-push-2 { left: 25%; }
+.m-push-3 { left: 50%; }
+.m-push-4 { left: 75%; }
+
+.m-pull-1 { right: 0; }
+.m-pull-2 { right: 25%; }
+.m-pull-3 { right: 50%; }
+.m-pull-4 { right: 75%; }
