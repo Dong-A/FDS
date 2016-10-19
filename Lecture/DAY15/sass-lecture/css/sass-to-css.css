@@ -1,0 +1,26 @@
+/*
+  hi, there.
+  yo man. */
+.box, .box-black, .box-red, .box-green, .box-blue {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.box-black {
+  background: #000;
+}
+
+.box-red {
+  background: #f00;
+}
+
+.box-green {
+  background: #0f0;
+}
+
+.box-blue {
+  background: #00f;
+}
+
+/*# sourceMappingURL=sass-to-css.css.map */

@@ -1,0 +1,62 @@
+/*
+  hi, there.
+  yo man.
+
+// Sass 스타일 코드 작성
+
+// Sass 기본 코드 스타일
+// html
+//   overflow-y: visible
+//
+//
+// body
+//   margin: 0 auto
+//   background: yellow
+//
+// nav#gnb
+//   // 모바일
+//   @media screen and (max-width: 40em)
+//     display: flex
+//   // 데스크탑
+//   @media screen and (min-width: 75em)
+//     display: none
+//   .show-grid &
+//     display: block
+//   ul
+//     margin-top: 0
+//     margin-bottom: 0
+//     list-style-type: none
+//     padding-left: 0
+//   li
+//     float: left
+//     margin-right: 20px
+//     &.current
+//       background: #ff0
+//   a
+//     color: #333
+//     &:hover, &:focus
+//       color: #808080
+//   & .show-grid
+//     color: black
+//
+.box
+  display: block
+  width: 100px
+  height: 100px
+
+.box-black
+  @extend .box
+  @extend .soho !optional
+  background: #000
+
+.box-red
+  @extend .box
+  background: #f00
+
+.box-green
+  @extend .box
+  background: #0f0
+
+.box-blue
+  @extend .box
+  background: #00f

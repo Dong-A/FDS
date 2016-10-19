@@ -1,0 +1,25 @@
+nav#gnb ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav#gnb li {
+  float: left;
+  margin-right: 20px;
+}
+
+nav#gnb li.current {
+  background: #ff0;
+}
+
+nav#gnb a {
+  color: #333;
+}
+
+nav#gnb a:hover, nav#gnb a:focus {
+  color: #808080;
+}
+
+/*# sourceMappingURL=sub.css.map */
