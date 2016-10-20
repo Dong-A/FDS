@@ -1,11 +1,62 @@
+/**
+ *  페이지 폭: 1920px
+ *  컬럼 개수: 16
+ *  컬럼 폭: 120px
+ *  거터 폭: 0
+ */
+
+ul li {
+  list-style: none;
+}
+
 body {
   margin: 0;
 }
 
+
+
+
+
+
+
+/* ============================================
+ 정적 Static 그리드
+ ============================================ */
+
+/* 그리드 모듈 */
 .contianer {
   width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container[class*='show-'] {
+  position: relative;
+}
+.container[class*='show-']::before {
+  content: '';
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+.container.show-grid::before {
+  background: linear-gradient(transparent 9px, #6426fb 9px), linear-gradient(90deg, hsla(89, 86%, 74%, 0.2) 120px, hsla(163, 64%, 49%, 0.2) 120px);
+  background-size: 1px 10px, 240px 1px;
 }
 
+/* 로우 & 클리어픽스 모듈 */
+.row::after,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 컬럼 모듈 */
+[class*="col-"] {
+  float: left;
+}
 .col-1 { width: 120px; }
 .col-2 { width: 240px; }
 .col-3 { width: 360px; }
@@ -22,9 +73,3 @@ body {
 .col-14 { width: 1680px; }
 .col-15 { width: 1800px; }
 .col-16 { width: 1920px; }
-
-
-/* ============================================
- header
- ============================================ */
- 
