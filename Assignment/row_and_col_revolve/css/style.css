@@ -1,0 +1,103 @@
+/*! grid-system-static.css © yamoo9.net, 2016 */
+
+/**
+ *  페이지 폭: 600px
+ *  컬럼 개수: 5
+ *  컬럼 폭: 100px
+ *  거터 폭: (10*2) = 20px
+ */
+
+/**
+ * ----------------------------------------------------------------
+ * 정적(Static) 그리드
+ * ---------------------------------------------------------------- */
+
+/**
+ * --------------------------------
+ * 컨테이너 모듈
+ * ----------------------------- */
+.container {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container[class*="show-"] {
+  position: relative;
+}
+.container[class*="show-"]::before {
+  content: '';
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container.show-grid::before {
+  background: linear-gradient(transparent 9px, #33ebe2 9px), linear-gradient(90deg, transparent 10px, hsla(163, 64%, 49%, 0.2) 10px, hsla(163, 64%, 49%, 0.2) 110px, transparent 110px);
+  background-size: 1px 10px, 120px 1px;
+}
+
+.container.show-baseline::before {
+  background: linear-gradient(transparent 9px, #33ebe2 9px);
+  background-size: 1px 10px;
+}
+.container.show-columns::before {
+  background: linear-gradient(90deg, transparent 10px, hsla(163, 64%, 49%, 0.2) 10px, hsla(163, 64%, 49%, 0.2) 110px, transparent 110px);
+  background-size: 120px 1px;
+}
+
+/**
+ * --------------------------------
+ * 로우 / 클리어픽스 모듈
+ * ----------------------------- */
+.row::after,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/**
+ * --------------------------------
+ * 컬럼 모듈
+ * ----------------------------- */
+[class*="col-"] {
+  /* 수평 레이아웃 */
+  float: left;
+  /* 거터 */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.col-1  { width: 100px; }
+.col-2  { width: 200px;  }
+.col-3  { width: 300px;  }
+.col-4  { width: 400px;  }
+.col-5  { width: 500px;  }
+
+/**
+ * --------------------------------
+ * 격리된 플로팅 모듈
+ * ----------------------------- */
+.row.isolate [class*="col-"] {
+  margin-right: -100%;
+  margin-top: -100%
+}
+
+
+.row.isolate .c1 { margin-left: 10px; }
+.row.isolate .r1 { margin-top: 0; }
+
+.row.isolate .c2 { margin-left: 130px; }
+.row.isolate .r2 { margin-top: 110px; }
+
+.row.isolate .c3 { margin-left: 250px; }
+.row.isolate .r3 { margin-top: 220px; }
+
+.row.isolate .c4 { margin-left: 370px; }
+.row.isolate .r4 { margin-top: 330px; }
+
+.row.isolate .c5 { margin-left: 490px; }
+.row.isolate .r5 { margin-top: 440px; }
