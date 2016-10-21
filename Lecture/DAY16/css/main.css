@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* 환경 설정 */
+/* -------------------------------- grid-container 모듈 ----------------------------- */
+.app { margin-left: auto; margin-right: auto; }
+
+/* -------------------------------- grid 모듈 ----------------------------- */
+.app .app-row { overflow: hidden; display: flex; flex-wrap: wrap; margin: 0; padding: 0; }
+
+/* 목록일 경우 */
+.app ul.app-row, .app ol.app-row { list-style: none; }
+
+/* 거터 모듈 */
+.app .app-row > div { margin: 0 10px; }
+
+/* 수평 정렬 모듈 */
+/* 수직 정렬 모듈 */
+/* 정가운데 정렬 모듈 */
+.app .app-row > div { display: flex; justify-content: center; align-items: center; }
+
+/* -------------------------------- cell 모듈 ----------------------------- */
+.app .app-row > div { box-sizing: border-box; /* 1 1 auto */ flex: 1; }
+
+/* 개별 크기 적용 모듈 */
+.app .app-row .app-fix { flex: 0 0 50%; }
+
+/* 개별 정렬 적용 모듈 */
+/** -------------------------------- 반응형 레이아웃 ----------------------------- */
+@media only screen and (min-width: 50em) {
+  .app .app-row .app-fix { flex: 0 0 33.3333%; }
+  
+  
+  }
+
+@media only screen and (min-width: 75em) {
+  
+  
+  .app .app-row .app-fix { flex: 0 0 25%; }
+  }
+
+/* 사용자 정의 스타일링 코드 파트 */
+@media screen and (min-width: 760px) { .app { width: 80%; } }
+
+@media screen and (min-width: 761px) and (max-width: 1220px) { .app { width: 1400px; } }
+
+@media screen and (min-width: 1480px) { .app { width: 1480px; } }
+
+@media screen and (min-width: 760px) { .app .app-row { width: 80%; } }
+
+@media screen and (min-width: 1220px) { .app .app-row { width: 1400px; } }
+
+@media screen and (min-width: 1480px) { .app .app-row { width: 1480px; } }
+
+.app .app-row .app-fix { margin-top: 10px; }
+
+.app .app-row > div { min-height: 60px; background: #7045cf; color: #fff; }
+
+.center-box { position: absolute; top: 0; left: 0; width: 400px; height: 200px; margin-top: -100px; margin-left: -200px; }
+
+body { font: 8.66667px Dotum; font: 8.66667px Dotum; font: 8.66667px Dotum; font: 13pxpx/1.5 Dotum; font: 11pxpx/1.5 Dotum; font: 13px/1.5 Dotum; }
+
+/*# sourceMappingURL=../map/main.css.map */

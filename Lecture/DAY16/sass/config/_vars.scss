@@ -1,0 +1,23 @@
+/* 환경 설정 */
+$app-width: 1400px;
+$app-min-height: 60px;
+
+
+// 브레이크포인트 (중단점) 설계
+$bp-prop: min-width;
+$breakpoint-md: 760px;
+$breakpoint-lg: 1220px;
+$breakpoint-xl: 1480px;
+
+
+// 가운데 정령 박스 모듈
+$box-width: 400px;
+$box-height: 200px;
+
+
+// 폰트
+$base: 13px;
+// $base: 13;
+
+
+//구글 웹 폰트 이름

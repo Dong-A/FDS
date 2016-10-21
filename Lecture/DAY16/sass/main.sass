@@ -1,0 +1,81 @@
+// 한 줄로도 가능하지만 불러 올 모듈이 많다면 권장하지 않는다.
+// @import "modules/normalize", "modules/grid"
+
+@import config/vars
+@import modules/normalize
+@import modules/_grid-hidden-module-name
+
+
+/* 사용자 정의 스타일링 코드 파트 */
+
+// $app-width: 1000px !default
+
+.app
+  // Mobile Frist: Small Screen
+  @extend %grid-container
+
+  // Medium Screen
+  @media screen and ($bp-prop: $breakpoint-md)
+    width: 80%
+  @media screen and ($bp-prop: $breakpoint-md + 1) and (max-width: $breakpoint-lg)
+    width: $app-width
+  @media screen and ($bp-prop: $breakpoint-xl)
+    width: $app-width + 80
+
+
+  .app-row
+    @extend %grid
+    @extend %grid-gutters
+    @extend %grid-gutters
+    @media screen and ($bp-prop: $breakpoint-md)
+      width: 80%
+    @media screen and ($bp-prop: $breakpoint-lg)
+      width: $app-width
+    @media screen and ($bp-prop: $breakpoint-xl)
+      width: $app-width + 80
+
+
+    .app-fix
+      @extend %cell-m-1-2
+      @extend %cell-t-1-3
+      @extend %cell-d-1-4
+      margin-top: 10px
+
+    > div
+      @extend %cell
+      @extend %grid-cm
+      min-height: 60px
+      background: #7045cf
+      color: #fff
+
+// 가운데 정령 박스
+.center-box
+  position: absolute
+  top: 0
+  left: 0
+  width: $box-width
+  height: $box-height
+  margin:
+    top: $box-height/ -2
+    left: $box-width/ -2
+
+
+body
+  font: $base/1.5 Dotum
+  font: $base / 1.5 Dotum
+  font: ($base / 1.5) Dotum
+
+  font: $base+px/1.5 Dotum
+  font: ($base/13 + $base/1.3)+px / 1.5 Dotum
+  //이게 더 좋은 방법(인터폴래이션(보간법)) 연산을 하지 말아야할 때 처리방식이다.
+  font: #{$base}/1.5 Dotum
+
+
+
+
+
+//@include {mixin name}
+.element
+
+
+.node

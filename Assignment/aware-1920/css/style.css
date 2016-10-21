@@ -5,19 +5,35 @@
  *  거터 폭: 0
  */
 
+ /* ============================================
+  초기화
+  ============================================ */
+
 ul li {
   list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
 }
 
 body {
   margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-family: "Varela Round"
 }
-
-
-
-
-
-
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.a11y {
+  text-indent: -9999em;
+}
 
 /* ============================================
  정적 Static 그리드
@@ -38,7 +54,7 @@ body {
   z-index: 10000;
   top: 0;
   min-height: 100vh;
-  width: 100%;
+  min-width: 100%;
 }
 .container.show-grid::before {
   background: linear-gradient(transparent 9px, #6426fb 9px), linear-gradient(90deg, hsla(89, 86%, 74%, 0.2) 120px, hsla(163, 64%, 49%, 0.2) 120px);
@@ -73,3 +89,92 @@ body {
 .col-14 { width: 1680px; }
 .col-15 { width: 1800px; }
 .col-16 { width: 1920px; }
+
+/* 푸쉬 & 풀 모듈 */
+[class*="push-"],
+[class*="pull-"] {
+  position: relative;
+}
+
+.push-1 { left: 120px; }
+.push-2 { left: 240px; }
+.push-3 { left: 360px; }
+.push-4 { left: 480px; }
+.push-5 { left: 600px; }
+.push-6 { left: 720px; }
+.push-7 { left: 840px; }
+.push-8 { left: 960px; }
+.push-9 { left: 1080px; }
+.push-10 { left: 1200px; }
+.push-11 { left: 1320px; }
+.push-12 { left: 1440px; }
+.push-13 { left: 1560px; }
+.push-14 { left: 1680px; }
+.push-15 { left: 1800px; }
+.push-16 { left: 1920px; }
+
+.pull-1 { right: 120px; }
+.pull-2 { right: 240px; }
+.pull-3 { right: 360px; }
+.pull-4 { right: 480px; }
+.pull-5 { right: 600px; }
+.pull-6 { right: 720px; }
+.pull-7 { right: 840px; }
+.pull-8 { right: 960px; }
+.pull-9 { right: 1080px; }
+.pull-10 { right: 1200px; }
+.pull-11 { right: 1320px; }
+.pull-12 { right: 1440px; }
+.pull-13 { right: 1560px; }
+.pull-14 { right: 1680px; }
+.pull-15 { right: 1800px; }
+.pull-16 { right: 1920px; }
+
+/* 격리된 플로팅 모듈 */
+.row.isolate [class*="col-1"] {
+ margin-right: -100%
+}
+
+.row.isolate .o1 { margin-left: 0; }
+.row.isolate .o2 { margin-left: 120px; }
+.row.isolate .o3 { margin-left:  240px; }
+.row.isolate .o4 { margin-left:  360px; }
+.row.isolate .o5 { margin-left:  480px; }
+.row.isolate .o6 { margin-left:  600px; }
+.row.isolate .o7 { margin-left:  720px; }
+.row.isolate .o8 { margin-left:  840px; }
+.row.isolate .o9 { margin-left:  960px; }
+.row.isolate .o10 { margin-left:  1080px; }
+.row.isolate .o11 { margin-left:  1200px; }
+.row.isolate .o12 { margin-left:  1320px; }
+.row.isolate .o13 { margin-left:  1440px; }
+.row.isolate .o14 { margin-left:  1560px; }
+.row.isolate .o15 { margin-left:  1680px; }
+.row.isolate .o16 { margin-left:  1800px; }
+/* ============================================
+ header
+ ============================================ */
+ul li, .logo, form {
+  float: left;
+}
+
+.logo {
+  background: url(../images/icon-logo.svg) no-repeat;
+  width: 95.282px;
+  height: 19.25px;
+  margin-left: 5rem;
+  margin-top: 1.875rem;
+}
+.main-menu li {
+  margin-left: 3.75rem;
+  margin-top: 1.875rem;
+}
+.search-form {
+  margin-left: 170px;
+}
+.search-form input {
+  height: 1.875rem;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  border-style: none;
+}
