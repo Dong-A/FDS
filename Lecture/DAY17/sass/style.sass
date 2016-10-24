@@ -1,0 +1,56 @@
+// '@mixin은' '='로 대신 쓸 수 있다.
+// @include는 +로 대신 쓸 수 있다.
+//
+// placehold는 정해져있따. 공통코드를 관리해야할 때
+// mixin은 인자에 따라 바뀔 수 있땨. 코드블럭이 가서 박힌다
+//
+//플레이스홀더 셀렉터 %
+%clearfix
+  &::after
+    content: ''
+    display: block
+    clear: both
+
+=clearfix($support-ie: true)
+  @extend %clearfix
+  @if $support-ie
+    .lt-ie8 &
+      zoon: 1
+
+=hover-link($padding-bottom: 2px, $border-bottom: 1px solid tomato)
+  text-decoration: none
+  &:hover, &:focus
+    padding-bottom: $padding-bottom
+    border-bottom: $border-bottom
+
+
+
+
+
+//
+=box-shadow( $args...)
+  -webkit-box-shadow: $args
+  -moz-box-shadow: $args
+  box-shadow: $args
+
+%fl
+  float: left
+
+
+@while $n < $count
+  @debug $n
+  .col-#{$n}
+    @extend %fl
+    width: column($n)
+  $n: $n-1
+
+@for $n from 1 to $count
+  @debug $n
+  .col-#{$1}
+    @extend %fl
+    width: column($i)
+
+$icon-list: play, stop, pause, next, previous
+@each $icon in $icon-list
+  .icon-#{$icon}
+    background-image: url("images/icons/icon-#{$icon}.png")

@@ -26,3 +26,23 @@
   display: block;
   clear: both;
 }
+/* 컬럼 모듈 */
+[class*="col-"] {
+  float: left;
+}
+.col-1 { width: 120px; }
+.col-2 { width: 240px; }
+.col-3 { width: 360px; }
+.col-4 { width: 480px; }
+.col-5 { width: 600px; }
+.col-6 { width: 720px; }
+.col-7 { width: 840px; }
+.col-8 { width: 960px; }
+.col-9 { width: 1080px; }
+.col-10 { width: 1200px; }
+.col-11 { width: 1320px; }
+.col-12 { width: 1440px; }
+.col-13 { width: 1560px; }
+.col-14 { width: 1680px; }
+.col-15 { width: 1800px; }
+.col-16 { width: 1920px; }

@@ -1,0 +1,38 @@
+//
+@mixin transition(
+  $property: all,
+  $duration: 400ms,
+  $easing-function:linear,
+  $delday: null
+  )
+  -webkit-transition: $property $duration $easing-function $delay;
+  -moz-transition: $property $duration $easing-function $delay;
+  -o-transition: $property $duration $easing-fuction $delay;
+  transition: $property $duration $easing-function $delay;
+
+@mixin border-radius ($radius: 4px) {
+  -webkit-wb-border-radius: $radius;
+  -moz-wb-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+@mixin background-origin ($origin: padding-box) {
+  -webkit-background-origin: $origin;
+  -moz-background-origin: $origin;
+  background-origin: $origin;
+}
+
+@mixin backgorund-clip ($clip: padding-box) {
+  -webkit-background-clip: $clip;
+  -moz-background-clip: $clip;
+  background-clip: $clip;
+}
+
+@mixin circle ($diameterL 100px, $bg-color: #000) {
+  width: $diameter;
+  height: $diameter;
+  background: $bg-color;
+  @include border-radius($diamerter/2);
+  @include background-clip;
+}
