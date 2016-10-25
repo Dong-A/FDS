@@ -111,8 +111,9 @@ var fnName2 = function() {};
 스코프 호이스트(Scope Hoist)로 인한 결과 차이가 있다.
 ```
 
-### 2.2. 전역 ( Global Scope )
+### 2.2. 전역 ( Global Scope ) VS 지역 ( Local Scope )
 
+#### 2.2.1. 전역
 - 전역이란?
 ```js
 웹 브라우저 환경에서 window {} 객체를 말한다.
@@ -125,7 +126,7 @@ console.log('coffee === window.coffee:', coffee === window.coffee);
 
 console.log('fnDeclaration === window.fnDeclaration:', fnDeclaration === window.fnDeclaration);
 ```
-#### 2.2.1 전역 변수 & 전역 함수
+##### 2.2.1.1. 전역 변수 & 전역 함수
 - 전역 변수, 전역 함수란?
 ```js
 웹 브라우저 환경에서 전역 객체인 window {}의 속성이다.
@@ -153,12 +154,10 @@ globalFunction();
 document.onclick = globalFunction;
 
 ```
-### 2.3. 지역 ( Local Scope )
-
+#### 2.2.2. 지역
 - 지역이란?
 ```
 자바스크립트 '함수'에 의해 생성되는 것으로 전역과 구분된다.
-따라서 지역 변수와 지역 함수는 전역 변수와 전역 함수와 이름이 같더라도 다르게 구분된다.
 ```
 - 확인 예제
 ```js
