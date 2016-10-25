@@ -257,7 +257,8 @@ showMessage('this is cook.');
 showMessage();
 ```
 - 전달 인자 표시
-올바른 전달 인자를 받기 위해 해당 인자들에 대한 설명을 붙여줄 수도 있다.
+
+> 올바른 전달 인자를 받기 위해 해당 함수의 정보를 표현할 수 있다.
 ```js
 /**
  *  @function sum
@@ -267,7 +268,8 @@ showMessage();
  */
 ```
 - 유효성 검사 (Validation)
-전달받은 인자를 검증하지 않으면 원하는 결과가 나오지 않을 수도 있다.
+
+> 전달받은 인자를 검증하지 않으면 원하는 결과가 나오지 않을 수도 있다.
 따라서 검증 과정을 만든다.
 ```js
 function sum(num1, num2) {
@@ -285,5 +287,55 @@ function sum(num1, num2) {
    // 함수가 종료되었기 때문....
    var demo = '데모';
    console.log(demo);
+}
+```
+
+### 2.5. 목적에 맞는 함수: 반환 값이 있는 함수
+- 목적에 맞는 함수란?
+```js
+return 키워드를 사용하여 함수 출력 결과를 돌려주는 함수
+```
+
+- 예제
+
+```js
+//목적(쓰임새)에 맞지 않는 함수!
+function getWindowWidth() {
+  // 창 크기의 가로 폭 길이 (너비, width)
+  var _window_width = window.innerWidth;
+  console.log('창 크기의 가로 폭 길이 (너비, width):', _window_width);
+}
+//반환 값이 있는 함수
+//목적에 맞는 함수
+function getWindowWidth() {
+  // 창 크기의 가로 폭 길이 (너비, width)
+  var _window_width = window.innerWidth;
+  console.log('창 크기의 가로 폭 길이 (너비, width):', _window_width);
+  return _window_width;
+  //return window.innerWidth; //한 줄로 간단하게 표현할 수 있다.
+}
+```
+
+### 2.6. arguments
+- arguments란?
+```js
+함수 내부에 전달되는 인자들의 집합으로 유사 배열(like Array Object)이다.
+.length 속성을 가지나 .push(), .pop() 같은 배열 메소드는 가지고 있지 않다.
+```
+- 예제
+```js
+function sum() {
+  // arguments 객체(전달된 인자들의 집합)
+  // arguments 객체의 원소 개수: arguments.length
+  // length 속성 값을 알고 있다면 순환 처리(for, do ~ while, while)가 가능
+  // arguments[0] = ''; // 설정도 가능.
+  // console.log(arguments);
+  for( var sum=0, i=0, l=arguments.length; i < l; i++ ) {
+    // console.log(typeof arguments[i]);
+    if (typeof arguments[i] !== 'number') { throw new Error('전달된 인자 중 숫자가 아닌 값이 있습니다.') }
+    // sum = sum + arguments[i];
+    sum += arguments[i];
+  }
+  return sum;
 }
 ```
