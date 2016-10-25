@@ -1,4 +1,3 @@
-# FDS
 # DAY 18
 ## 1. 자바스크립트 반복문 (ES 3)
 ###  1.1. While문
@@ -112,9 +111,8 @@ var fnName2 = function() {};
 스코프 호이스트(Scope Hoist)로 인한 결과 차이가 있다.
 ```
 
-### 2.2. 전역 VS 지역
+### 2.2. 전역 ( Global Scope )
 
-#### 2.2.1 전역 Global Scope
 - 전역이란?
 ```js
 웹 브라우저 환경에서 window {} 객체를 말한다.
@@ -127,7 +125,7 @@ console.log('coffee === window.coffee:', coffee === window.coffee);
 
 console.log('fnDeclaration === window.fnDeclaration:', fnDeclaration === window.fnDeclaration);
 ```
-##### 2.2.1.1 전역 변수 & 전역 함수
+#### 2.2.1 전역 변수 & 전역 함수
 - 전역 변수, 전역 함수란?
 ```js
 웹 브라우저 환경에서 전역 객체인 window {}의 속성이다.
@@ -138,9 +136,9 @@ this는 window를 가리킨다.
 ```
 - 확인 예제
 ```js
-var global_valiable = this; // ???
+var global_valiable = this;
 var globalFunction = function() {
-  console.log('this:', this); // ??
+  console.log('this:', this);
 };
 
 // 전역 함수 실행, 함수를 실행시킨 주체는 누구인가?
@@ -155,3 +153,30 @@ globalFunction();
 document.onclick = globalFunction;
 
 ```
+### 2.3. 지역 ( Local Scope )
+
+- 지역이란?
+```
+자바스크립트 '함수'에 의해 생성되는 것으로 전역과 구분된다.
+따라서 지역 변수와 지역 함수는 전역 변수와 전역 함수와 이름이 같더라도 다르게 구분된다.
+```
+- 확인 예제
+```js
+// if, else, while, for, switch 구문에서는 별도의 지역이 생성되지 않는다.
+{
+  var scope_variable = '지역 변수?';
+  console.log('블록문 내부 scope_variable:', scope_variable);
+}
+console.log('블록문 외부 scope_variable:', scope_variable);
+//
+// 그렇다면 블록문이 아닌, 어떤 경우에 전역과 구분되는 지역이 생성되나?
+// 그것은 바로 자바스크립트 '함수'이다.
+function createLocalScope() {
+  var scope_variable = '함수 내부 지역 변수?';
+  console.log('함수 내부 scope_variable:', scope_variable);
+}
+createLocalScope();
+console.log('함수 외부 scope_variable:', scope_variable);
+```
+
+### 2.4. 스코프 ( Scope )
