@@ -166,22 +166,18 @@ document.onclick = globalFunction;
 // if, else, while, for, switch 구문에서는 별도의 지역이 생성되지 않는다.
 {
   var scope_variable = '지역 변수?';
-  console.log('블록문 내부 scope_variable:', scope_variable);
-	// 블록문 내부 scope_variable: 지역 변수?
+  console.log('블록문 내부 scope_variable:', scope_variable); // 블록문 내부 scope_variable: 지역 변수?
 }
-console.log('블록문 외부 scope_variable:', scope_variable);
-// 블록문 외부 scope_variable: 지역 변수?
+console.log('블록문 외부 scope_variable:', scope_variable); // 블록문 외부 scope_variable: 지역 변수?
 
 // 그렇다면 블록문이 아닌, 어떤 경우에 전역과 구분되는 지역이 생성되나?
 // 그것은 바로 자바스크립트 '함수'이다.
 function createLocalScope() {
   var scope_variable = '함수 내부 지역 변수?';
-  console.log('함수 내부 scope_variable:', scope_variable);
-	// 함수 내부 scope_variable: 함수 내부 지역 변수?
+  console.log('함수 내부 scope_variable:', scope_variable); // 함수 내부 scope_variable: 함수 내부 지역 변수?
 }
 createLocalScope();
-console.log('함수 외부 scope_variable:', scope_variable);
-// 함수 외부 scope_variable: 지역 변수?
+console.log('함수 외부 scope_variable:', scope_variable); // 함수 외부 scope_variable: 지역 변수?
 ```
 
 
