@@ -2,6 +2,7 @@
 ## 1. 자바스크립트 반복문 (ES 3)
 ###  1.1. While문
 - 기본 문법
+조건이 참인 경우 코드블럭 내용을 반복 실행한다.
 ```js
 while() { ... }
 ```
@@ -11,8 +12,8 @@ var condition = true, count = 0;
 while (condition) {
 	// 조건(condition)이 참일 경우 코드 블록 반속 수행.
 	if ( ++count > 3 ) {
-	// ++CODE : 선증가
-	// CODE++ : 후증가
+	// ++CODE : 선증가. 먼저 숫자를 증가시킨 후 코드 실행.
+	// CODE++ : 후증가. 먼저 코드를 실행한 후 숫자 증가.
 	// '선증가'와 '후증가'는 반복횟수에 차이가 있다.
 	// if (++count > 3) -> 1, 2, 3, 4
 	// if (count++ > 3) -> 0, 1, 2, 3, 4
@@ -24,6 +25,7 @@ while (condition) {
 ### 1.2. Do While문
 
 - 기본 문법
+조건이 거짓이라도 1회는 실행된다.
 ```js
 do { ... } while(condition);
 ```
@@ -40,6 +42,7 @@ console.log('count:', count);
 ### 1.3. for문
 
 - 기본 문법
+반복문에 사용할 변수를 만들고 조건이 거짓이 될 때까지 계속 반복한다.
 ```js
 for ( ; ; ) { ... }
 ```
@@ -67,6 +70,7 @@ for ( var count = 0, condition = true; condition; ) {
 ### 1.4. for in문
 
 - 기본 문법
+객체의 내부 속성을 순환하여 처리한다.
 ```js
 for ( var property in object ) { ... }
 ```
