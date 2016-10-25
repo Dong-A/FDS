@@ -178,4 +178,112 @@ createLocalScope();
 console.log('함수 외부 scope_variable:', scope_variable);
 ```
 
-### 2.4. 스코프 ( Scope )
+### 2.3. 스코프 ( Scope )
+- 스코프란?
+```
+변수와 함수의 유효(생존)범위로 크게 전역 유효범위, 지역 유효범위로 나뉜다.
+```
+#### 2.3.1 스코프 체이닝
+- 함수 내부에서 var 키워드를 사용해 변수를 선언해야 하는 이유
+```js
+var hadoom = '하둠';
+
+function localFn() {
+  // 지역
+  // hadoom = 'Hadoom';
+  var hadoom = 'Hadoom';
+
+  function inLocalFn() {
+    // 지역 내 지역
+    // window.hadoom = '하아둠';
+    // hadoom = '하아둠';
+    var hadoom = '하아둠';
+  }
+
+  inLocalFn();
+
+}
+
+localFn();
+
+console.log('hadoom:', hadoom); // ????
+```
+
+#### 2.3.2 호이스트(Hoist) 현상
+- 호이스팅이란?
+```
+코드를 실행하기 전에 var, function 선언을 해당 영역(Scope)의 가장 상위에 끌어 올려지는 것.
+1. function 선언문의 몸체(body)가 통째로 끌어 올려진다.
+2. var 선언문에서 할당된 값이 아닌, 변수 이름만 끌어 올려진다.
+```
+
+-예제
+```js
+function fn() {
+  var course; // undefined
+  if (course) {
+    course = 'develop';
+    console.log(course); // 수행되지 않음
+  }
+  console.log(course); // undefined
+}
+
+var course = 'design';
+
+fn();
+
+console.log(course); // 'design'
+```
+### 2.4. 유용한 함수 활용: 함수 확장
+- 함수 확장이란?
+```
+매개변수(전달인자)를 설정한 함수
+```
+- 예제
+
+```js
+function showMessage(message) {
+  // message = 'this is message.';
+  // message = 'this is messanger.';
+  // message = 'this is cook.';
+  // 초기 값 설정
+  message = message || 'default message';
+  console.log(message);
+}
+
+showMessage('this is message.');
+showMessage('this is messanger.');
+showMessage('this is cook.');
+showMessage();
+```
+- 전달 인자 표시
+올바른 전달 인자를 받기 위해 해당 인자들에 대한 설명을 붙여줄 수도 있다.
+```js
+/**
+ *  @function sum
+ *  @param    {number}  num1
+ *  @param    {number}  num2
+ *  @return   {number}  두 수의 합을 반환
+ */
+```
+- 유효성 검사 (Validation)
+전달받은 인자를 검증하지 않으면 원하는 결과가 나오지 않을 수도 있다.
+따라서 검증 과정을 만든다.
+```js
+function sum(num1, num2) {
+   // 기대하는 데이터 유형을 감별하여 문제가 발생한 경우
+   // 사용자에게 안내해줘야 한다. 유효성검사(Validation)
+   if ( typeof num1 !== 'number' || typeof num2 !== 'number' ) {
+       // console.error('전달된 인자 값은 숫자 유형이 아닙니다. 숫자 유형을 넣어주세요.');
+       // 오류 발생시, 코드 중단
+       throw new Error('전달된 인자 값은 숫자 유형이 아닙니다. 숫자 유형을 넣어주세요.');
+   }
+   // return 키워드는 함수를 종료, 값을 반환
+   return num1 + num2;
+
+   // return 뒤의 구문은 실행되지 않는다.
+   // 함수가 종료되었기 때문....
+   var demo = '데모';
+   console.log(demo);
+}
+```
