@@ -217,7 +217,7 @@ console.log('hadoom:', hadoom); // ????
 2. var 선언문에서 할당된 값이 아닌, 변수 이름만 끌어 올려진다.
 ```
 
--예제
+- 예제
 ```js
 function fn() {
   var course; // undefined
