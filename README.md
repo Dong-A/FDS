@@ -63,7 +63,8 @@ for ( var count = 0, condition = true; condition; ) {
   if ( ++count > 3 ) { // 1, 2, 3, 4
     condition = !condition;
   }
-  console.log('count:', count); // 1, 2, 3, 4
+  console.log('count:', count);
+	// 1, 2, 3, 4
 }
 ```
 
