@@ -6,6 +6,11 @@
 // 브라우저를 구성하는 객체들
 // window {} : Global Object
 // window 객체에 종속된 하위 객체들
+
+
+console.log('%c------------------------------', 'color: #3d9a21');
+
+
 //// 1. window.screen {}
 // 사용자의 스크린에 관한 정보를 제공하는 객체
 var screen = global.screen;
@@ -67,7 +72,7 @@ global.screenInfo = screenInfo(); // 함수를 실행한 결과 값을 screenInf
 global.screenInfo = screenInfo;  // 함수 객체를 screenInfo에 참조
 
 
-
+console.log('%c------------------------------', 'color: #3d9a21');
 
 
 //// 2. window.location
@@ -83,93 +88,109 @@ console.dir( global.location );
 // reload() 메소드 : 현재 페이지를 새로 고침
 
 
-
+console.log('%c------------------------------', 'color: #3d9a21');
 
 
 //// 3. window.history
 // 사용자가 현재 윈도우에서 탐색한 페이지를 기억하는 객체
 // 이전(back)/다음(forward)/특정(go) 페이지로 이동
+// length 속성을 가지고 있다.
 
-
-
+console.log('%c------------------------------', 'color: #3d9a21');
 
 
 //// 4. window.navigator
+// 웹 브라우저의 정보를 가진 객체
+// 브라우저 스니핑
+var navigator = global.navigator;
+var platform  = navigator.platform;
+var is_mac    = platform.toLowerCase().indexOf('mac') > -1;
+var is_win    = platform.toLowerCase().indexOf('win') > -1;
+var html      = window.document.documentElement;
+
+html.className = is_mac ? 'mac' : 'win';
+// if (is_mac) {
+//   html.className = 'mac';
+// } else {
+//   html.className = 'win';
+// }
 
 
-
-// 페이지 로드 시에 주소창의 hash값을 가져와서
-// 해당
+console.log('%c------------------------------', 'color: #3d9a21');
 
 
 //// 5. window.document
 
 
-//////////////////////////
-//  DOM 문서 객체 모델  //
-/////////////////////////
+///////////////////////////
+//    DOM 문서 객체 모델    //
+///////////////////////////
+
+}(this));
+
+
+// location.hash: <a>를 클릭했을 때, hash를 통해 목표 요소를 스타일링하는 응용 예제
+(function(global){
+  'use strict';
+
+  var document   = global.document;
+  var location   = global.location;
+  var setTimeout = global.setTimeout;
+  var bg_color   = '#fef9d0';
+  var duration   = 3000; // 1000ms === 1s
+
+  // 페이지 로드 시에 주소창의 hash 값을 가져와서
+  // 해당 요소를 찾아서 스타일링한다.
+  var stylingHashElement = function () {
+
+    var hash = location.hash;
+    var target_element = null;
+
+    // 임의 정의된 hash 값이 있다면
+    if ( hash ) {
+      target_element = document.querySelector(hash);
+    }
+    console.log(target_element);
+    if ( target_element ) {
+      // 스타일 추가
+      target_element.style.background = bg_color;
+      target_element.style.transition = 'background 0.3s';
+      // 특정 시간이 지나면 스타일 제거
+      // setTimeout(removeStyleTargetElement, duration);
+      setTimeout(function() {
+        target_element.style.background = 'transparent';
+      }, duration);
+    }
+
+  };
+
+  // var removeStyleTargetElement = function() {
+  //   console.log('try setTimeout');
+  // };
+
+  // window 객체의 load 이벤트가 발생하면
+  // styleHashElement 함수를 실행하라.
+  // global.onload = stylingHashElement;
+  global.onload = assignAction;
+
+  function assignAction() {
+    var go_to_point = document.querySelector('#go-to-point');
+    var go_to_links = go_to_point.querySelectorAll('a');
+    for ( var i=0, l=go_to_links.length; i<l; i++ ) {
+      go_to_links[i].onclick = function() {
+        // this
+        setTimeout(stylingHashElement, 100);
+      };
+    }
+  }
+
 
 }(this));
 
 
 
-//
-// (function(global){
-//   'use strict';
-//
-//   var document   = global.document;
-//   var location   = global.location;
-//   var setTimeout = global.setTimeout;
-//   var bg_color   = '#8b73ba';
-//   var duration   = 1000; // 1000ms === 1s
-//
-//   // 페이지 로드 시에 주소창의 hash 값을 가져와서
-//   // 해당 요소를 찾아서 스타일링한다.
-//   var stylingHashElement = function () {
-//
-//     // var target_element, hash = location.hash;
-//     var hash = location.hash;
-//     var target_element = null;
-//
-//     // 임의 정의된 hash 값이 있다면
-//     if ( hash ) {
-//       target_element = document.querySelector(hash);
-//       console.log(target_element);
-//     }
-//
-//     if ( target_element ) {
-//       // 스타일 추가
-//       target_element.style.background = bg_color;
-//       target_element.style.transition = 'background 0.3s';
-//       // 특정 시간이 지나면 스타일 제거
-//       setTimeout(removeStyleTargetElement, duration);
-//     }
-//   };
-//
-//   var removeStyleTargetElement = function() {
-//     console.log('try setTimeout');
-//   };
-//   // window 객체의 load 이벤트가 발생하면
-//   // styleHashElement 함수를 실행하라.
-//   global.onload = stylingHashElement;
-// }(this));
-//
-// // window 객체의 load 이벤트가 발생하면
-// // styleHashElement 함수를 실행하라
-// // global.onload = styleHashElement;
-// global.onload = assignAction;
-//
-// function assignAction() {
-//   var go_to_point = document.querySelector('#go-to-point');
-//   var go_to_links = go_to_point.querySelectorAll('a');
-//   for ( var i = 0, l = go_to_links.length; i < l; i++ ) {
-//
-//   }
-// }
 
-
-
-// 사용자 에이전트의 식별자를 통해 기기 판별 응용
+// navigator.userAgent: 사용자 에이전트의 식별자를 통해 기기 판별 응용
 (function(global){
   'use strict';
 
@@ -200,13 +221,16 @@ console.dir( global.location );
   }
 
   // iPhone, Android, iPad 감지
-  if ( userAgent.indexOf('iphone') > -1 ) {
-    console.log('iphone');
-  }
-  if ( userAgent.indexOf('android') > -1 ) {
-    console.log('android');
-  }
-  if ( userAgent.indexOf('ipad') > -1 ) {
-    console.log('ipad');
-  }
+  // if ( userAgent.indexOf('iphone') > -1 ) {
+  //   console.log('iphone');
+  // }
+  // if ( userAgent.indexOf('android') > -1 ) {
+  //   console.log('android');
+  // }
+  // if ( userAgent.indexOf('ipad') > -1 ) {
+  //   console.log('ipad');
+  // }
+
+  // 모듈 공개
+  global.checkDevices = checkDevices;
 })(this);
