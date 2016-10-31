@@ -1,0 +1,12 @@
+$headings: (
+  h1: 3rem -0.03em,
+  h2: 2rem -0.02em,
+  h3: 1.5rem -0.15em
+);
+
+@each $heading, $props in $headings {
+  #{$heading} {
+    font-size: nth($props, 1);
+    letter-spacing: nth($props, 2);
+  }
+}

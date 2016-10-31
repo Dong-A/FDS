@@ -1,0 +1,15 @@
+{
+  "name": "dom-script-using-sass",
+  "version": "1.0.0",
+  "description": "my DOM Script project using sass",
+  "scripts": {
+    "sass": "node-sass sass -o css -w -r",
+    "serve": "http-server -o -a localhost -p 9090",
+    "start": "npm run sass | npm run serve"
+  },
+  "keywords": [
+    "sass",
+    "domscript"
+  ],
+  "author": "DA"
+}
