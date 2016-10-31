@@ -140,8 +140,7 @@ DOM Lv0에서 사용되던 오래된 속성은 아래와 같은 방법으로 접
 - 속성 추가
 ```js
 .createAttribute()
-```
-```js
+
 .setAttribute()
 ```
 > `createAttribute()` 메서드는 `속성(Key)`만을 생성하고 `속성 값(Value)`은 추가로 코드를 작성해야 하므로 코드 양이 많아진다.
