@@ -86,37 +86,26 @@ $  npm start
 
 ```
 #### 2.1.2. 노드 속성 접근
-<<<<<<< HEAD
-#####HTML DOM 방식 [Getter | Setter]
-
-DOM Lv0에서 사용되던 오래된 속성은 아래와 같은 방법으로 접근
-
-- .id
-- .title
-- .className
-
-#####XML DOM 방식
-
-=======
 - HTML DOM 방식 [Getter | Setter]
+
 DOM Lv0에서 사용되던 오래된 속성은 아래와 같은 방법으로 접근
 
 ```js
 .id
-```
-```js
+
 .title
-```
-```js
+
 .className
 ```
+
 - XML DOM 방식
->>>>>>> parent of 8e26466... no message
+
 새롭게 등장한 속성들은 XML DOM 방식으로 값을 가져와야 한다.
+```js
+[Getter] .getAttribute(key)
 
-- [Getter] .getAttribute(key)
-- [Setter] .setAttribute(key, value)
-
+[Setter] .setAttribute(key, value)
+```
 
 ### 2.2. DOM API : Selection 1
 - id 속성으로 객체를 찾는 방법
