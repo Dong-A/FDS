@@ -55,11 +55,9 @@ $  npm scripts의 속성값
 - 실행 예
 ```
 $  npm sass
-```
-```
+
 $  npm serve
-```
-```
+
 $  npm start
 ```
 
