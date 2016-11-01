@@ -1,6 +1,6 @@
 ###### Front-End Develop SCHOOL
 
-# DAY 20
+# DAY 21
 ## 1. NPM 패키지 정보 생성
 ### 1.1. 생성 방법
 - npm 초기화
@@ -98,7 +98,7 @@ DOM Lv0에서 사용되던 오래된 속성은 아래와 같은 방법으로 접
 
 - XML DOM 방식
 
-새롭게 등장한 속성들은 XML DOM 방식으로 값을 가져와야 한다.
+새롭게 등장한 속성들은 XML DOM 방식으로 접근한다.
 ```js
 [Getter] .getAttribute(key)
 

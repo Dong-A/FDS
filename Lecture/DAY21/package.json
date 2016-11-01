@@ -1,15 +1,15 @@
 {
-  "name": "dom-script-using-sass",
+  "name": "dom-script-project-using-sass",
   "version": "1.0.0",
-  "description": "my DOM Script project using sass",
+  "description": "DOM Script Project Using Sass.",
   "scripts": {
-    "sass": "node-sass sass -o css -w -r",
+    "sass": "node-sass -w -r DOM_Script/sass -o DOM_Script/css --source-map ./DOM_Script/css --output-style compressed",
     "serve": "http-server -o -a localhost -p 9090",
     "start": "npm run sass | npm run serve"
   },
   "keywords": [
-    "sass",
-    "domscript"
+    "domscript",
+    "sass"
   ],
   "author": "DA"
 }
