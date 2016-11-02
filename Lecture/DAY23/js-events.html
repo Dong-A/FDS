@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript 이벤트</title>
+  <script src="js-events.js"></script>
+  <script>
+  function clickButton(button) {
+      console.log('this:', this);
+      console.log('button:', button);
+      // return;
+      // this -> window
+      // button -> .look-at-button
+      // 방법 2.
+      // this???? .look-at-button
+      // if (
+      //     (this.nodeName.toLowerCase() === 'button') &&
+      //     (typeof button === 'object')
+      // ) {
+      //   button = this;
+      // }
+      // console.log(button);
+      // return;
+      window.alert('clicked button element.');
+      if (button.firstChild.nodeValue==='click me') {
+        button.firstChild.nodeValue='this is button. clicked!';
+      } else {
+        button.firstChild.nodeValue='click me';
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <button type="button" class="look-at-button">Look</button>
+
+  <button
+    onclick="clickButton(this)"
+  >click me</button>
+
+
+<script>
+(function(global){
+'use strict';
+var look_at_button = document.querySelector('.look-at-button');
+
+// 버튼을 몇 회 이상 클릭한 후에는 버튼을 사용자가 클릭할 수 없게 만들고자 한다.
+// 버튼을 클릭한 횟수를 기억할 변수
+var click_count = 0;
+
+// [이벤트 연결] 이벤트 속성에 함수 값 연결
+look_at_button.onclick = function() {
+  console.log('clicked:', this.onclick);
+  if ( ++click_count === 2 ) {
+    // 클릭한 횟수가 2회가 되면 버튼을 사용자가 클릭할 수 없게 만든다.
+    // this.setAttribute('disabled', disabled);
+
+    // [ 이벤트 제거 ] 이벤트 속성에 null 대입함으로 연결된 함수를 끊음
+    this.onclick = null; // 참조한 함수를 끊고 null 대입
+    console.log('finshed:', this.onclick);
+  }
+  // window.alert('button click');
+}
+
+
+// ES 5
+// 방법 3.
+look_at_button.onclick = clickButton.bind(window, look_at_button);
+
+// ES 3
+// 방법 0.
+// look_at_button.onclick = clickButton;
+
+// 방법 1.
+// look_at_button.onclick = function(){
+//   // this === look_at_button;
+//   // 함수 지역 내에서 참조가 되지 않는 변수, 혹은 함수는
+//   // 암묵적으로 스코프 체이닝을 통해 상위 영역을 거슬러~ 거슬러~ 올라가
+//   // 결국은 전역까지 가서 전역 함수를 실행하게 됩니다.
+//   // 결국 느려지기에 성능 이슈가 생기고 암묵적인 표현이므로 디버깅 이슈가 생기게 된다.
+//   // 즉 window를 명시적으로 작성해주어야 한다.
+//   window.clickButton(this);
+// };
+
+  function checkWindowResize() {
+    console.log('창의 너비:', this.innerWidth);
+    var device_width = getWindowWidth();
+    if ( device_width > 1200 ) {
+      console.log('device is desktop');
+    } else if ( device_width <= 1200 && device_width > 768 ) {
+      console.log('device is tablet');
+    } else {
+      console.log('device is mobile');
+    }
+  }
+
+  window.onload = init;
+  })(this);
+</script>
+</body>
+</html>
