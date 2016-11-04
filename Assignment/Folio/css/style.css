@@ -629,4 +629,9 @@ ol.grid {
   text-indent: -9999em;
 }
 
+.header {
+  float: left;
+  background-color: blue;
+}
+
 /*# sourceMappingURL=../map/style.css.map */
