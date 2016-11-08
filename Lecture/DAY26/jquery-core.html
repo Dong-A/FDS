@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
+  <title>jQuery 코어</title>
+  <script>
+    // 다른 JS라이브러리
+    var $ = function(selector) {
+      return document.querySelector(selector);
+    };
+    var $$ = function(selector) {
+      return document.querySelectorAll(selector);
+    };
+    console.log('$:', $);
+    console.log('%c------------------------------', 'color: #3d9a21');
+    window.addEventListener('DOMContentLoaded', function() {
+      var body = $('body');
+      console.log(body);
+      body.classList.add('body-element');
+    });
+  </script>
+</head>
+<body>
+
+<script src="jquery-core.js"></script>
+</body>
+</html>
