@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.scroll-menu ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.scroll-menu li{
+  float: left;
+  padding: 0 30px;
+  list-style: none;
+}
+
+
+
+.scene {
+  position: relative;
+  box-shadow: 0 20px 15px hsla(0, 0%, 0%, .4);
+}
+
+.scene:nth-of-type(1) { z-index: 100000; }
+.scene:nth-of-type(2) { z-index: 10000; }
+.scene:nth-of-type(3) { z-index: 1000; }
+.scene:nth-of-type(4) { z-index: 100; }
+.scene:nth-of-type(5) { z-index: 10; }
+
+.scene img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
