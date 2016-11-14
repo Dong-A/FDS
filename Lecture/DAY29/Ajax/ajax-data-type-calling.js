@@ -2,6 +2,29 @@
 (function(global, Ajax){
   'use strict';
 
+  global.addEventListener('DOMContentLoaded', parsePageLoad);
+
+  function parsePageLoad() {
+    var page = this.location.hash.replace(/#!/, '');
+    var button;
+    switch(page) {
+      case 'txt':
+        button = buttons[0];
+      break;
+      case 'html':
+        button = buttons[1];
+      break;
+      case 'xml':
+        button = buttons[2];
+      break;
+      case 'json':
+        button = buttons[3];
+      break;
+    }
+    AjaxCalling.call(button);
+  }
+
+
   var buttons  = document.querySelectorAll('.call-ajax-data');
   var print_el = document.querySelector('.ajax-data-result');
 
@@ -53,13 +76,39 @@
 
         break;
         case 'json':
-          var text2json_obj = global.JSON.parse(this.response);
-          text2json_obj.results.forEach(function(obj) {
-            console.log('name: ', obj.name.first + ' ' + obj.name.last);
+          var txt2json_obj = global.JSON.parse(this.response);
+          var json_html_template = [];
+          txt2json_obj.results.forEach(function(o, i){
+            json_html_template.push(`
+              <ul class="person-info">
+                <li><img class="person-picture" src="${o.picture.medium}" alt="${o.name.first}"></li>
+                <li>
+                  <h3 class="person-name">
+                    <span class="name-title">${o.name.title.toUpperCase()}</span>
+                    <span class="name-first">${o.name.first}</span>
+                    <span class="name-last">${o.name.last}</span>
+                  </h3>
+                </li>
+                <li>
+                  <span class="person-gender">${o.gender}</span>
+                  <span class="person-national">${o.nat}</span></li>
+                <li><span class="person-cell">${o.cell}</span></li>
+                <li><span class="person-email">${o.email}</span></li>
+                <li>
+                  <p class="person-address">
+                    <span class="address-state">${o.location.state}</span>
+                    <span class="address-city">${o.location.city}</span>
+                    <span class="address-street">${o.location.street}</span>
+                  </p>
+                </li>
+              </ul>
+            `);
           });
+          print_el.innerHTML = json_html_template.join('');
         break;
       }
     }
+    global.location.hash = '!' + type;
   }
 
 })(this, this.XMLHttpRequest);
