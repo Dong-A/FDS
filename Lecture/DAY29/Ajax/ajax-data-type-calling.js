@@ -39,13 +39,22 @@
     if(this.status === 200 && this.readyState === 4) {
       switch(type) {
         case 'txt':
-          print_el.innerHTML = 'print txt data type';
-        break;
         case 'html':
-          print_el.innerHTML = 'print html data type';
+          print_el.innerHTML = this.responseText;
         break;
         case 'xml':
-          print_el.innerHTML = 'print xml data type';
+          // print_el.innerHTML = 'print xml data type';
+          var xml_doc = this.responseXML;
+          var people = xml_doc.getElementsByTagName('person');
+          for ( var i=0, l=people.length; i<l; i++ ) {
+            var person = people[i];
+            var person_name = person.getElementsByTagName('name')[0].firstChild.nodeValue;
+            var person_tel  = person.getElementsByTagName('tel')[0].firstChild.nodeValue;
+            var person_mail = person.getElementsByTagName('mail')[0].firstChild.nodeValue;
+            console.log(person_name);
+            console.log(person_tel);
+            console.log(person_mail);
+          }
         break;
         case 'json':
           print_el.innerHTML = 'print json data type';
