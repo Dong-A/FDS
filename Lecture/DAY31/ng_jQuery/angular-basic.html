@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angular v1 + jQuery Project</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/jquery.js"></script>
+  <script src="lib/angular.js"></script>
+</head>
+<!--  -->
+<body data-ng-init="app_name='angularJS V1.5.8'">
+
+  <input type="text" data-ng-model="app_name">
+
+  <!-- ANgular Expresstion -->
+  <h1>Angular Version: <span class="ng-version">{{app_name}}</span></h1>
+
+  <h1>Angular Version {{is_show}}</h1>
+
+  <button type="button" data-ng-click="is_show=!is_show">toggle show</button>
+
+
+  <div class="menu-arc">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+
+  <input type="text" data-ng-show="is_show" data-ng-model="app_name">
+
+  <!-- Angular Directive -->
+  <p data-ng-bind="app_name"></p>
+
+  <!-- jQuery Version: Two Way Data Binding -->
+  <input type="text" id="twb">
+  <p id="twb-binding"></p>
+
+</body>
+</html>

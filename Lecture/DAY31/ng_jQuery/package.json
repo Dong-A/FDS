@@ -1,0 +1,22 @@
+{
+  "name": "ng_jQuery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w -r --source-map ./map sass -o css --output-style compressed",
+    "start": "webpack-dev-server --open",
+    "server": "webpack-dev-server",
+    "server-i": "webpack-dev-server --inline",
+    "build-server": "webpack-dev-server --config webpack-build.config.js",
+    "build": "webpack --config webpack-build.config.js -p",
+    "clear": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "jquery": "^3.1.1"
+  }
+}
