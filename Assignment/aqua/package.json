@@ -1,0 +1,12 @@
+{
+  "name": "aqua",
+  "version": "1.0.0",
+  "description": "aqua sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w -r sass -o css --output-style expanded --source-map ./map"
+  },
+  "keywords": ["sass"],
+  "author": "",
+  "license": "ISC"
+}

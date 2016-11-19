@@ -8,23 +8,22 @@
   margin-left: auto;
   margin-right: auto;
   width: 1170px;
-  height: 100vh;
 }
 
-.container.show-grid {
+.show-grid {
   position: relative;
 }
 
-.container[class*="show-"]::before {
+.show-grid::before {
   content: '';
   position: absolute;
   z-index: 1000;
   top: 0;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
 }
 
-.container.show-grid::before {
+.show-grid::before {
   background: linear-gradient(transparent 9px, #96d3ff 9px), linear-gradient(90deg, transparent 15px, hsla(163, 64%, 49%, 0.2) 15px, hsla(163, 64%, 49%, 0.2) 70px, transparent 70px);
   background-size: 1px 10px, 100px 1px;
 }

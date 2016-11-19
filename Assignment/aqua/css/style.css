@@ -447,6 +447,29 @@ template {
   display: none;
 }
 
+/*! reset.css © yamoo9.net, 2016 */
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /*! flex-grid-system.css © yamoo9.net, 2016 */
 /**
  * --------------------------------
@@ -456,23 +479,22 @@ template {
   margin-left: auto;
   margin-right: auto;
   width: 1170px;
-  height: 100vh;
 }
 
-.container.show-grid {
+.show-grid {
   position: relative;
 }
 
-.container[class*="show-"]::before {
+.show-grid::before {
   content: '';
   position: absolute;
   z-index: 1000;
   top: 0;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
 }
 
-.container.show-grid::before {
+.show-grid::before {
   background: linear-gradient(transparent 9px, #96d3ff 9px), linear-gradient(90deg, transparent 15px, rgba(45, 205, 160, 0.2) 15px, rgba(45, 205, 160, 0.2) 70px, transparent 70px);
   background-size: 1px 10px, 100px 1px;
 }
@@ -646,26 +668,133 @@ ol.grid {
 }
 
 .a11y, .logo a {
+  position: absolute;
   text-indent: -9999em;
 }
 
-h1 {
-  margin: 0;
+.readable-hidden {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+}
+
+.lato-font, .lato-font-light, .lato-font-bold {
+  font-family: 'Lato', sans-serif;
+}
+
+.lato-font-light {
+  font-weight: 300;
+}
+
+.lato-font-bold {
+  font-weight: 700;
 }
 
 .header a {
   text-decoration: none;
+  color: #5b5c5d;
 }
 
 .logo {
   background: url("../images/icon-Aqua-logo.png") no-repeat;
   width: 103px;
   height: 35px;
-  margin-top: 2.5rem;
 }
 
 .logo a {
   position: absolute;
+}
+
+.navigation-wrapper {
+  background-color: #f1f5f8;
+}
+
+.navigation {
+  width: 1170px;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.25rem;
+}
+
+.main-nav {
+  width: 370px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-nav {
+  width: 165px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-product-wrapper {
+  width: 100vw;
+  background: url(../images/photo-BnOA9.png) no-repeat top center;
+}
+
+.head-product {
+  padding-left: 4.375rem;
+  height: 830px;
+}
+
+.head-product h2 {
+  padding-top: 10.625rem;
+  width: 20.625rem;
+  font-size: 3.75rem;
+  letter-spacing: -.035em;
+}
+
+.head-product p {
+  width: 18.75rem;
+  font-size: 1.5rem;
+  color: #9a9a9a;
+}
+
+.color-select-group h3 {
+  margin-top: 1.875rem;
+  font-size: 1.125rem;
+}
+
+.color-select-group label {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-left: 45px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 1.25rem;
+}
+
+.color-select-group label:nth-of-type(1) {
+  background-color: #f1f1f1;
+  border: 1px solid #dadada;
+}
+
+.color-select-group label:nth-of-type(2) {
+  background-color: #484848;
+  border: 1px solid #464646;
+}
+
+.color-select-group label:nth-of-type(3) {
+  background-color: #e1b7a4;
+  border: 1px solid #caa493;
+}
+
+.color-select-group input[type="radio"] {
+  position: absolute;
+  left: -9999em;
+}
+
+.color-select-group input[type="radio"]:nth-of-type(1):checked + label::before {
+  content: '';
+  height: 12px;
+  width: 17px;
+  background: url(../images/icon-check-blue.png) no-repeat;
 }
 
 /*# sourceMappingURL=../map/style.css.map */
