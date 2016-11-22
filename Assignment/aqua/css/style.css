@@ -680,12 +680,12 @@ ol.grid {
   margin: -1px;
 }
 
-.lato-font, .lato-font-light, .head-product, .price-group p, .lato-font-bold, .navigation, .price-group button, .color-select-group h3 {
+.lato-font, .lato-font-light, .head-product, .price-group p, .carousel-title, .lato-font-bold, .navigation, .price-group button, .color-select-group h3 {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 
-.lato-font-light, .head-product, .price-group p {
+.lato-font-light, .head-product, .price-group p, .carousel-title {
   font-weight: 300;
 }
 
@@ -846,6 +846,40 @@ ol.grid {
   height: 60px;
   border-radius: 30px;
   cursor: pointer;
+}
+
+.main {
+  background-color: #f1f5f8;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-title {
+  font-size: 1.875rem;
+  justify-content: center;
+  padding-top: 4.375rem;
+}
+
+.carousel-taplist {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-taplist li {
+  display: inline-block;
+}
+
+.carousel-taplist li a {
+  background-color: #d8dcdf;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
 /*# sourceMappingURL=../map/style.css.map */
