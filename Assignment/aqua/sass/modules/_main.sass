@@ -3,6 +3,7 @@
 
 .carousel
   position: relative
+  height: 38.125rem
 
 .carousel-title
   @extend .lato-font-light
@@ -12,12 +13,11 @@
 
 .carousel-taplist
   position: absolute
-  bottom: 0
+  bottom: 4.375rem
   left: 50%
   transform: translateX(-50%)
   li
     display: inline-block
-
     a
       background-color: #d8dcdf
       display: inline-block
@@ -25,3 +25,50 @@
       height: 10px
       border-radius: 50%
       margin: 0 5px
+
+.carousel-button-wrapper
+  button
+    width: 20px
+    height: 36px
+    border: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+  button:nth-of-type(1)
+    background: url(../images/Icon-arrow-left.png) no-repeat
+    left: 30px
+  button:nth-of-type(2)
+    background: url(../images/Icon-arrow-right.png) no-repeat
+    right: 30px
+
+.carousel-tabpanel-wrapper
+  padding-top: 2.5rem
+  position: relative
+  img
+    margin-left: 6.25rem
+
+.tabpanel-info-wrapper
+  position: absolute
+  top: 40%
+  transform: translateY(-40%)
+  right: 6.25rem
+  h2
+    @extend .lato-font-light
+    font-size: 3rem
+  p
+    width: 25rem
+    @extend .lato-font
+    font-size: 1rem
+    color: #656667
+  button
+    @extend .lato-font-bold
+    font-size: 0.875rem
+    color: #fff
+    border: 0
+    background-color: #0d87ff
+    width: 150px
+    height: 45px
+    border-radius: 30px
+    cursor: pointer
+    margin-top: 1.875rem
