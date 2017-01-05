@@ -10,9 +10,9 @@ body {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #222222;
-  width: 1440px;
 }
 .container {
+  width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -72,11 +72,11 @@ p {
 /* ============================================
  Header
  ============================================ */
- .header::after {
-   content: "";
-   clear: both;
-   display: block;
- }
+.header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
 .logo, .main-menu li, .info-menu li {
   float: left;
 }
@@ -648,6 +648,160 @@ p {
 /* ============================================
  footer
  ============================================ */
+.footer-main-menu {
+  background: #222;
+  border-bottom: 1px solid #353535;
+}
+
+.footer-main-menu ul {
+  position: relative;
+  width: 875px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer-main-menu li {
   float: left;
+  padding: 0 20px;
+}
+
+.footer-main-menu a {
+  display: inline-block;
+  line-height: 60px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-family: "Varela Round";
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-main-menu li::after {
+  content: "•";
+  display: inline-block;
+  color: #636363;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 14px;
+}
+
+.footer-main-menu li:last-child::after {
+  display: none;
+}
+
+.footer-logo-wrap {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  height: 120px;
+  background: #222;
+  border-right: 1px solid #353535;
+}
+
+.footer-logo {
+  position: absolute;
+  margin-top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/svg-icon-footer-logo-aware.svg) no-repeat;
+  width: 96px;
+  height: 20px;
+}
+
+.footer-copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 55%;
+  font-family: "PT Serif";
+  font-size: 12px;
+  font-style: italic;
+  color: #868686;
+  width: 130px;
+  text-align: center;
+}
+
+.footer-send-mail-wrap {
+  height: 120px;
+  background: #222;
+  border-right: 1px solid #353535;
+  box-sizing: border-box;
+}
+
+.footer-send-mail-wrap input {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  display: block;
+  width: 360px;
+  height: 30px;
+  border-radius: 20px;
+  border: 0;
+  background:
+    url(../images/svg-icon-mail.svg) 15px no-repeat,
+    url(../images/svg-icon-footer-arrow-right.svg) 95% no-repeat;
+  background-color: #393939;
+  font-family: "PT Serif";
+  font-size: 12px;
+  font-style: italic;
+  text-indent: 45px;
+}
+
+.privacy-terms-acc-wrap {
+  width: 360px;
+  margin: 0 auto;
+}
+
+.privacy-terms-acc-wrap div {
+  float: left;
+}
+
+.privacy-terms-acc-wrap a {
+  color: #adadad;
+  font-family: "Varela Round";
+  font-size: 12px;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+.footer-sns-wrap {
+  background: #222;
+  height: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #353535;
+}
+
+.footer-sns-wrap ul {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.footer-sns-wrap li {
+  float: left;
+  padding: 5px 8px;
+}
+
+.footer-sns-wrap img {
+  padding: 5px 10px;
+}
+
+.footer-payments-wrap {
+  background: #222;
+  height: 60px;
+}
+
+.footer-payments-wrap ul {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.footer-payments-wrap li {
+  float: left;
+  padding: 0 11px;
 }
